@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>ONYX Bazaar | خدمات پرمیوم تلگرام</title>
 
-    <!-- SEO Description -->
     <meta name="description" content="امن، سریع، حرفه‌ای. ONYX BAZAAR | ارائه‌دهنده خدمات پریمیوم، استارز، ممبر و ری اکشن فیک. ۲ سال اعتماد شما، یک هدف: کیفیت.">
 
-    <!-- OG — Social Share -->
     <meta property="og:site_name" content="ONYX Bazaar | خدمات پرمیوم تلگرام">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://onyxbazaar.netlify.app">
@@ -16,34 +14,11 @@
     <meta property="og:image" content="https://raw.githubusercontent.com/AmirZzzw/onyx/main/Logo.png">
     <meta property="og:description" content="امن، سریع، حرفه‌ای. ONYX BAZAAR | ارائه‌دهنده خدمات پریمیوم، استارز، ممبر و ری اکشن فیک. ۲ سال اعتماد شما، یک هدف: کیفیت.">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/AmirZzzw/onyx/main/Logo.png">
     <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/AmirZzzw/onyx/main/Logo.png">
     <meta name="theme-color" content="#000000">
 
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "ONYX Bazaar",
-      "alternateName": "ONYX Bazaad",
-      "url": "https://onyxbazaar.netlify.app",
-      "description": "امن، سریع، حرفه‌ای. ONYX BAZAAR | ارائه‌دهنده خدمات پریمیوم، استارز، ممبر و ری اکشن فیک. ۲ سال اعتماد شما، یک هدف: کیفیت.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "ONYX Bazaar",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://raw.githubusercontent.com/AmirZzzw/onyx/main/Logo.png"
-        }
-      }
-    }
-    </script>
-    
-    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Font Vazir -->
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
     <style>
         * {
@@ -66,7 +41,6 @@
             margin: 0 auto;
         }
 
-        /* ========== HEADER ========== */
         .header {
             text-align: center;
             margin-bottom: 2rem;
@@ -90,7 +64,6 @@
             padding-top: 8px;
         }
 
-        /* ========== هشدار فیشینگ ========== */
         .phishing-warning {
             background: #1a0a0a;
             border: 2px solid #e33b3b;
@@ -113,7 +86,6 @@
             font-weight: 800;
         }
 
-        /* ========== دو دکمه اصلی ========== */
         .main-buttons {
             display: flex;
             justify-content: center;
@@ -154,7 +126,6 @@
             transform: translateY(-2px);
         }
 
-        /* ========== محتوای اصلی ========== */
         .content-panel {
             background: #0e0e0e;
             border-radius: 1.5rem;
@@ -175,7 +146,6 @@
             to { opacity: 1; transform: translateY(0);}
         }
 
-        /* ========== استایل لیست خدمات ========== */
         .section-header {
             text-align: center;
             margin-bottom: 2rem;
@@ -277,7 +247,6 @@
             color: white;
         }
 
-        /* استایل استارز لیست قیمت */
         .stars-package-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -326,7 +295,6 @@
             color: white;
         }
 
-        /* ========== صفحه ثبت سفارش (رسید) ========== */
         .order-page {
             max-width: 700px;
             margin: 0 auto;
@@ -392,6 +360,44 @@
             resize: vertical;
             min-height: 80px;
         }
+        .file-upload-area {
+            background: #1a1a1a;
+            border: 2px dashed #e33b3b;
+            border-radius: 1rem;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 1rem;
+        }
+        .file-upload-area:hover {
+            background: #222;
+            border-color: #ff5555;
+        }
+        .file-upload-area i {
+            font-size: 1.5rem;
+            color: #e33b3b;
+            margin-bottom: 0.3rem;
+        }
+        .file-upload-area p {
+            font-size: 0.75rem;
+            color: #aaa;
+        }
+        .file-name {
+            font-size: 0.7rem;
+            color: #e33b3b;
+            margin-top: 0.3rem;
+        }
+        #receiptImage {
+            display: none;
+        }
+        .preview-image {
+            margin-top: 0.5rem;
+            max-width: 100%;
+            max-height: 120px;
+            border-radius: 0.5rem;
+            display: none;
+        }
         .submit-receipt-btn {
             background: #e33b3b;
             color: white;
@@ -405,6 +411,10 @@
             cursor: pointer;
             margin-top: 0.5rem;
         }
+        .submit-receipt-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
         .back-to-services {
             display: inline-block;
             background: transparent;
@@ -417,7 +427,6 @@
             margin-bottom: 1rem;
         }
 
-        /* ========== استایل اطلاعات شاپ ========== */
         .about-shop {
             max-width: 900px;
             margin: 0 auto;
@@ -470,49 +479,59 @@
             margin-top: 5px;
         }
         
-        .contact-section {
+        /* لینک‌های Owner, Admin, Shop, Trust */
+        .links-section {
             margin-top: 2rem;
             padding: 1.5rem;
             background: #0a0a0a;
             border-radius: 1.5rem;
             border: 1px solid #2a2a2a;
         }
-        .contact-title {
+        .links-title {
             font-size: 1.2rem;
             font-weight: 700;
             color: #e33b3b;
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
         }
-        .contact-box {
-            text-align: center;
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        .link-card {
+            background: #111111;
+            border: 1px solid #333;
+            border-radius: 1rem;
             padding: 1rem;
-        }
-        .telegram-id-big {
-            background: #1a1a1a;
-            display: inline-block;
-            padding: 0.7rem 2rem;
-            border-radius: 60px;
-            font-family: monospace;
-            font-size: 1.1rem;
-            color: #e33b3b;
-            margin: 0.5rem auto;
+            text-align: center;
             cursor: pointer;
-            border: 2px solid #e33b3b;
-            transition: 0.2s;
+            transition: all 0.2s ease;
         }
-        .telegram-id-big:hover {
-            background: #e33b3b;
-            color: white;
+        .link-card:hover {
+            border-color: #e33b3b;
+            background: #1a1a1a;
+            transform: translateY(-3px);
         }
-        .contact-note {
+        .link-card i {
+            font-size: 1.8rem;
+            color: #e33b3b;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .link-card .link-name {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+        .link-card .link-id {
             font-size: 0.7rem;
             color: #888;
-            margin-top: 0.8rem;
+            font-family: monospace;
         }
 
         .footer-gold {
@@ -552,8 +571,8 @@
             .service-info-col { text-align: right; }
             .main-btn { padding: 0.6rem 1.5rem; font-size: 0.9rem; }
             .about-card { padding: 1.2rem; }
-            .telegram-id-big { font-size: 0.9rem; padding: 0.5rem 1.2rem; }
             .card-number { font-size: 1.1rem; }
+            .links-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
@@ -584,9 +603,9 @@
             
             <h3 style="color:#e33b3b; margin: 1rem 0 0.5rem 0;"><i class="fas fa-crown"></i> خدمات پریمیوم</h3>
             <div class="service-card-list">
-                <div class="service-row-card"><div class="service-title-col"><div class="title">طرح 3 ماهه</div><div class="sub">پریمیوم اختصاصی بدون لاگین</div></div><div class="service-info-col"><span class="price">قیمت: پی وی (PV)</span><div class="price-note">نوسانات دلار</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="طرح 3 ماهه پریمیوم"><i class="fab fa-telegram"></i> ثبت سفارش</button></div></div>
-                <div class="service-row-card"><div class="service-title-col"><div class="title">طرح 6 ماهه</div><div class="sub">پشتیبانی ویژه VIP</div></div><div class="service-info-col"><span class="price">قیمت: پی وی (PV)</span><div class="price-note">ارسال تضمینی</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="طرح 6 ماهه پریمیوم"><i class="fab fa-telegram"></i> ثبت سفارش</button></div></div>
-                <div class="service-row-card"><div class="service-title-col"><div class="title">طرح 12 ماهه</div><div class="sub">ممتاز با گارانتی</div></div><div class="service-info-col"><span class="price">قیمت: پی وی (PV)</span><div class="price-note">پشتیبانی ۲۴/۷</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="طرح 12 ماهه پریمیوم"><i class="fab fa-telegram"></i> ثبت سفارش</button></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">طرح 3 ماهه</div><div class="sub">پریمیوم اختصاصی بدون لاگین</div></div><div class="service-info-col"><span class="price">2,500 تومان</span><div class="price-note">ارزان و مقرون به صرفه</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="طرح 3 ماهه پریمیوم - 2,500 تومان"><i class="fab fa-telegram"></i> ثبت سفارش</button></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">طرح 6 ماهه</div><div class="sub">پشتیبانی ویژه VIP</div></div><div class="service-info-col"><span class="price">3,500 تومان</span><div class="price-note">ارسال تضمینی</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="طرح 6 ماهه پریمیوم - 3,500 تومان"><i class="fab fa-telegram"></i> ثبت سفارش</button></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">طرح 12 ماهه</div><div class="sub">ممتاز با گارانتی</div></div><div class="service-info-col"><span class="price">5,500 تومان</span><div class="price-note">پشتیبانی ۲۴/۷</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="طرح 12 ماهه پریمیوم - 5,500 تومان"><i class="fab fa-telegram"></i> ثبت سفارش</button></div></div>
             </div>
 
             <h3 style="color:#e33b3b; margin: 1.5rem 0 0.5rem 0;"><i class="fas fa-star"></i> خدمات استارز (گیفتی)</h3>
@@ -621,7 +640,7 @@
             </div>
 
             <div class="footer-note" style="margin-top: 2rem; text-align: center; font-size: 0.75rem; color: #777;">
-                <i class="fas fa-info-circle"></i> کلیه قیمت‌های پریمیوم به دلیل نوسانات بازار به صورت پیوی اعلام می‌گردد. برای استعلام با ادمین تماس بگیرید.
+                <i class="fas fa-info-circle"></i> کلیه خدمات با تضمین کیفیت ارائه می‌شوند. برای اطلاعات بیشتر با ادمین تماس بگیرید.
             </div>
         </div>
 
@@ -660,14 +679,32 @@
                     </div>
                 </div>
 
-                <div class="contact-section">
-                    <div class="contact-title">
-                        <i class="fab fa-telegram"></i> راه ارتباطی با ادمین و پشتیبانی
+                <!-- لینک‌های Owner, Admin, Shop, Trust -->
+                <div class="links-section">
+                    <div class="links-title">
+                        <i class="fas fa-link"></i> ارتباط با ما
                     </div>
-                    <div class="contact-box">
-                        <div class="telegram-id-big" id="aboutAdminId">@abbasOnyX</div>
-                        <div class="contact-note">برای استعلام قیمت، ثبت سفارش و پشتیبانی، روی آیدی کلیک کنید تا کپی شود</div>
-                        <div class="contact-note">پاسخگویی ۲۴ ساعته حتی در روزهای تعطیل</div>
+                    <div class="links-grid">
+                        <div class="link-card" data-link="https://t.me/abbasonyx">
+                            <i class="fas fa-user-tie"></i>
+                            <div class="link-name">Owner</div>
+                            <div class="link-id">@abbasonyx</div>
+                        </div>
+                        <div class="link-card" data-link="https://t.me/arnold_ff">
+                            <i class="fas fa-user-cog"></i>
+                            <div class="link-name">Admin</div>
+                            <div class="link-id">@arnold_ff</div>
+                        </div>
+                        <div class="link-card" data-link="https://t.me/onyxbazaar">
+                            <i class="fas fa-store"></i>
+                            <div class="link-name">Shop</div>
+                            <div class="link-id">@onyxbazaar</div>
+                        </div>
+                        <div class="link-card" data-link="https://t.me/onyxbazaartrust">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="link-name">Trust</div>
+                            <div class="link-id">@onyxbazaartrust</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -687,6 +724,7 @@
 
                 <div class="receipt-form">
                     <h4 style="margin-bottom: 1rem; color:#e33b3b;"><i class="fas fa-upload"></i> ارسال رسید پرداخت</h4>
+                    
                     <div class="form-group">
                         <label>نام و نام خانوادگی</label>
                         <input type="text" id="fullName" placeholder="مثال: علی رضایی">
@@ -703,10 +741,21 @@
                         <label>شماره تراکنش / رسید بانکی</label>
                         <input type="text" id="refCode" placeholder="کد رهگیری یا شماره مرجع">
                     </div>
+                    
+                    <!-- بخش آپلود رسید -->
+                    <div class="file-upload-area" id="fileUploadArea">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>برای آپلود رسید کلیک کنید</p>
+                        <div class="file-name" id="fileName"></div>
+                        <img class="preview-image" id="previewImage" alt="پیش‌نمایش رسید">
+                    </div>
+                    <input type="file" id="receiptImage" accept="image/*">
+
                     <div class="form-group">
                         <label>توضیحات سفارش (خدمت درخواستی)</label>
                         <textarea id="orderDetails" placeholder="مثال: 100 Star - بسته 100 تایی"></textarea>
                     </div>
+                    
                     <button class="submit-receipt-btn" id="submitReceiptBtn"><i class="fab fa-telegram"></i> ارسال رسید به ادمین</button>
                 </div>
             </div>
@@ -719,9 +768,12 @@
 </div>
 
 <script>
-    const ADMIN_ID = "@imvnzdy";
+    const ADMIN_ID = "@imvenzdy";
     const CARD_NUMBER = "6219861956913106";
+    const BOT_TOKEN = "8340894676:AAENMcTOAp9jGqrQZ3JE-bFgtHg2BDORRws";
+    const CHAT_ID = "477353630";
     let currentSelectedService = "";
+    let selectedImageFile = null;
 
     function showToast(message) {
         const toast = document.createElement('div');
@@ -737,13 +789,50 @@
         }).catch(() => showToast('کپی دستی: ' + CARD_NUMBER));
     }
 
-    function copyAdminAndNotify() {
-        navigator.clipboard.writeText(ADMIN_ID).then(() => {
-            showToast('آیدی ادمین ' + ADMIN_ID + ' کپی شد! می‌توانید در تلگرام پیام دهید.');
-        }).catch(() => showToast('لطفاً دستی کپی کنید: ' + ADMIN_ID));
+    // آپلود عکس به تلگرام و ارسال پیام
+    async function uploadAndSendToTelegram(formDataText) {
+        if (!selectedImageFile) {
+            // اگر عکسی نبود فقط متن رو بفرست
+            const message = encodeURIComponent(formDataText);
+            window.open(`https://t.me/${ADMIN_ID.replace('@','')}?text=${message}`, '_blank');
+            showToast("به تلگرام منتقل شدید. لطفاً رسید را دستی ارسال کنید.");
+            return true;
+        }
+
+        const formData = new FormData();
+        formData.append('chat_id', CHAT_ID);
+        formData.append('caption', formDataText);
+        formData.append('photo', selectedImageFile);
+
+        try {
+            showToast("در حال ارسال به ادمین...");
+            
+            const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`, {
+                method: 'POST',
+                body: formData
+            });
+            
+            const result = await response.json();
+            
+            if (result.ok) {
+                showToast("✅ رسید با موفقیت برای ادمین ارسال شد!");
+                return true;
+            } else {
+                console.error("Telegram API error:", result);
+                showToast("❌ خطا در ارسال! پیام به صورت متنی ارسال می‌شود.");
+                const message = encodeURIComponent(formDataText + "\n\n⚠️ تصویر رسید آپلود نشد. لطفاً دستی ارسال کنید.");
+                window.open(`https://t.me/${ADMIN_ID.replace('@','')}?text=${message}`, '_blank');
+                return false;
+            }
+        } catch (error) {
+            console.error("Upload error:", error);
+            showToast("❌ خطا در ارسال! لطفاً دستی پیام دهید.");
+            const message = encodeURIComponent(formDataText + "\n\n⚠️ خطا در آپلود تصویر. لطفاً رسید را دستی ارسال کنید.");
+            window.open(`https://t.me/${ADMIN_ID.replace('@','')}?text=${message}`, '_blank');
+            return false;
+        }
     }
 
-    // نمایش صفحه سفارش با نام خدمت
     function showOrderPage(serviceName) {
         currentSelectedService = serviceName;
         document.getElementById('orderDetails').value = serviceName;
@@ -760,6 +849,9 @@
         btnServices.classList.add('active');
         btnAbout.classList.remove('active');
         currentSelectedService = "";
+        selectedImageFile = null;
+        document.getElementById('previewImage').style.display = 'none';
+        document.getElementById('fileName').innerHTML = '';
     }
 
     const btnServices = document.getElementById('btn-services');
@@ -789,7 +881,28 @@
     document.getElementById('backToServices').addEventListener('click', backToServicesPage);
     document.getElementById('copyCardBtn').addEventListener('click', copyCardNumber);
 
-    // همه دکمه‌های ثبت سفارش (خدمات عادی)
+    // آپلود فایل
+    const fileInput = document.getElementById('receiptImage');
+    const uploadArea = document.getElementById('fileUploadArea');
+    const fileNameSpan = document.getElementById('fileName');
+    const previewImg = document.getElementById('previewImage');
+
+    uploadArea.addEventListener('click', () => fileInput.click());
+    
+    fileInput.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files[0]) {
+            selectedImageFile = e.target.files[0];
+            fileNameSpan.innerHTML = `📎 ${selectedImageFile.name}`;
+            
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                previewImg.src = event.target.result;
+                previewImg.style.display = 'block';
+            };
+            reader.readAsDataURL(selectedImageFile);
+        }
+    });
+
     document.querySelectorAll('.order-service-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -798,7 +911,6 @@
         });
     });
 
-    // دکمه‌های استارز
     document.querySelectorAll('.stars-order-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -807,38 +919,46 @@
         });
     });
 
-    // ارسال رسید به ادمین (تلگرام)
-    document.getElementById('submitReceiptBtn').addEventListener('click', () => {
-    const fullName = document.getElementById('fullName').value.trim();
-    const telegramId = document.getElementById('telegramId').value.trim();
-    const amountPaid = document.getElementById('amountPaid').value.trim();
-    const refCode = document.getElementById('refCode').value.trim();
-    const orderDetails = document.getElementById('orderDetails').value.trim();
+    // لینک‌های بخش اطلاعات شاپ
+    document.querySelectorAll('.link-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const link = card.getAttribute('data-link');
+            if(link) {
+                window.open(link, '_blank');
+                showToast('در حال باز کردن لینک تلگرام...');
+            }
+        });
+    });
 
-    // فقط فیلدهایی که وجود دارن رو چک کن (بدون receiptLink)
-    if(!fullName || !telegramId || !amountPaid || !refCode) {
-        showToast("لطفاً تمام فیلدها (نام، آیدی، مبلغ، تراکنش) را پر کنید.");
-        return;
-    }
+    // ارسال رسید
+    document.getElementById('submitReceiptBtn').addEventListener('click', async () => {
+        const fullName = document.getElementById('fullName').value.trim();
+        const telegramId = document.getElementById('telegramId').value.trim();
+        const amountPaid = document.getElementById('amountPaid').value.trim();
+        const refCode = document.getElementById('refCode').value.trim();
+        const orderDetails = document.getElementById('orderDetails').value.trim();
 
-    const message = `✅ سفارش جدید از سایت ONYX BAZAAR\n\n👤 نام: ${fullName}\n🆔 تلگرام: ${telegramId}\n💰 مبلغ: ${amountPaid} تومان\n🧾 شماره تراکنش: ${refCode}\n📦 جزئیات سفارش: ${orderDetails || currentSelectedService || "نامشخص"}\n\n⏱ لطفاً رسید بررسی شود.`;
+        if(!fullName || !telegramId || !amountPaid || !refCode) {
+            showToast("لطفاً تمام فیلدها (نام، آیدی، مبلغ، تراکنش) را پر کنید.");
+            return;
+        }
 
-    const encodedMsg = encodeURIComponent(message);
-    window.open(`https://t.me/${ADMIN_ID.replace('@','')}?text=${encodedMsg}`, '_blank');
-    
-    showToast("به تلگرام منتقل شدید. پیام حاوی رسید برای ادمین ارسال شود.");
-    
-    // ریست فرم
-    document.getElementById('fullName').value = '';
-    document.getElementById('telegramId').value = '';
-    document.getElementById('amountPaid').value = '';
-    document.getElementById('refCode').value = '';
-    document.getElementById('orderDetails').value = '';
-    currentSelectedService = "";
-});
+        const message = `✅ سفارش جدید از سایت ONYX BAZAAR\n\n👤 نام: ${fullName}\n🆔 تلگرام: ${telegramId}\n💰 مبلغ: ${amountPaid} تومان\n🧾 شماره تراکنش: ${refCode}\n📦 جزئیات سفارش: ${orderDetails || currentSelectedService || "نامشخص"}\n⏱ زمان: ${new Date().toLocaleString('fa-IR')}`;
 
-    const aboutAdminSpan = document.getElementById('aboutAdminId');
-    if (aboutAdminSpan) aboutAdminSpan.addEventListener('click', copyAdminAndNotify);
+        await uploadAndSendToTelegram(message);
+        
+        // ریست فرم
+        document.getElementById('fullName').value = '';
+        document.getElementById('telegramId').value = '';
+        document.getElementById('amountPaid').value = '';
+        document.getElementById('refCode').value = '';
+        document.getElementById('orderDetails').value = '';
+        selectedImageFile = null;
+        previewImg.style.display = 'none';
+        fileNameSpan.innerHTML = '';
+        fileInput.value = '';
+        currentSelectedService = "";
+    });
 </script>
 </body>
 </html>
