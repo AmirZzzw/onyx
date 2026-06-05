@@ -704,10 +704,6 @@
                         <input type="text" id="refCode" placeholder="کد رهگیری یا شماره مرجع">
                     </div>
                     <div class="form-group">
-                        <label>لینک عکس فیش واریزی (آپلود در فضای ابری و ارسال لینک)</label>
-                        <textarea id="receiptLink" placeholder="لطفاً تصویر رسید را در سرویسی مثل img.ir آپلود کرده و لینک آن را وارد کنید"></textarea>
-                    </div>
-                    <div class="form-group">
                         <label>توضیحات سفارش (خدمت درخواستی)</label>
                         <textarea id="orderDetails" placeholder="مثال: 100 Star - بسته 100 تایی"></textarea>
                     </div>
@@ -723,7 +719,7 @@
 </div>
 
 <script>
-    const ADMIN_ID = "@abbasOnyX";
+    const ADMIN_ID = "@imvenzdy";
     const CARD_NUMBER = "6037-9974-1234-5678";
     let currentSelectedService = "";
 
@@ -825,7 +821,7 @@
             return;
         }
 
-        const message = `✅ سفارش جدید از سایت ONYX BAZAAR\n\n👤 نام: ${fullName}\n🆔 تلگرام: ${telegramId}\n💰 مبلغ: ${amountPaid} تومان\n🧾 شماره تراکنش: ${refCode}\n🔗 لینک رسید: ${receiptLink}\n📦 جزئیات سفارش: ${orderDetails || currentSelectedService || "نامشخص"}\n\n⏱ لطفاً رسید بررسی شود.`;
+        const message = `✅ سفارش جدید از سایت ONYX BAZAAR\n\n👤 نام: ${fullName}\n🆔 تلگرام: ${telegramId}\n💰 مبلغ: ${amountPaid} تومان\n🧾 شماره تراکنش: ${refCode}\n📦 جزئیات سفارش: ${orderDetails || currentSelectedService || "نامشخص"}\n\n⏱ لطفاً رسید بررسی شود.`;
 
         const encodedMsg = encodeURIComponent(message);
         window.open(`https://t.me/${ADMIN_ID.replace('@','')}?text=${encodedMsg}`, '_blank');
