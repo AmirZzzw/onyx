@@ -1,236 +1,257 @@
-<!DOCTYPE html>
+m<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>ONYX Bazaar | لوکس ترین خدمات پریمیوم و استارز تلگرام</title>
-    
+    <title>ONYX Bazaar | خدمات پریمیوم تلگرام</title>
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- Font Vazir - دقیقا همین لینک توی کد خودت کار کرده -->
+    <!-- Font Vazir - دقیقا لینک معتبر -->
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
-    
     <style>
-        /* حذف کامل هایلایت آبی هنگام کلیک */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
-            -webkit-touch-callout: none;
-        }
-
-        /* اعمال فونت وزیر روی کل صفحه - EXACT SAME AS YOUR WORKING CODE */
-        body, html, button, div, span, p, h1, h2, h3, h4, a, .cat-btn, .service-title, .service-price, .brand, .tagline, .security-card, .badge-light, .footnote, .footer-gold, .section-header h2, .service-item, .price-hint, .telegram-id {
-            font-family: Vazir, Tahoma, 'Segoe UI', system-ui, sans-serif !important;
-        }
-        
-        /* حذف فوکوس آبی */
-        button, .cat-btn, a, div[role="button"] {
-            outline: none !important;
-            -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
-        }
-        
-        button:focus, .cat-btn:focus, a:focus {
-            outline: none !important;
-            box-shadow: none !important;
         }
 
         body {
-            background: radial-gradient(ellipse at 20% 30%, #0a0715, #020105);
-            color: #eceaff;
+            font-family: Vazir, Tahoma, 'Segoe UI', sans-serif !important;
+            background: #0a0a0a;
+            color: #ffffff;
             line-height: 1.5;
             padding: 2rem 1.5rem;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
-        /* هدر */
-        .luxury-header {
+        /* ========== HEADER ========== */
+        .header {
             text-align: center;
             margin-bottom: 2rem;
         }
         .brand {
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #F3E5C0, #CDA458, #AA7C3C);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: -0.5px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            letter-spacing: -1px;
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(255,255,255,0.1);
+        }
+        .brand span {
+            color: #e33b3b;
         }
         .tagline {
-            color: #b7ab88;
-            margin-top: 8px;
-            font-weight: 400;
-            border-bottom: 1px solid rgba(205, 164, 88, 0.5);
+            color: #888;
+            font-size: 0.85rem;
+            margin-top: 6px;
+            border-top: 1px solid #222;
             display: inline-block;
-            padding-bottom: 6px;
-            font-size: 0.95rem;
+            padding-top: 8px;
         }
 
-        /* بخش امنیت */
+        /* ========== هشدار امنیتی (کارت سفید-مشکی) ========== */
         .security-card {
-            background: rgba(15, 12, 28, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(205, 164, 88, 0.3);
-            border-radius: 1.2rem;
-            padding: 1rem 2rem;
-            margin: 1.8rem auto;
-            max-width: 1000px;
+            background: #111111;
+            border: 1px solid #2a2a2a;
+            border-radius: 1rem;
+            padding: 0.9rem 1.5rem;
+            margin: 1.5rem auto;
+            max-width: 950px;
             text-align: right;
-            font-size: 0.85rem;
-            color: #dfd9c4;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            font-size: 0.8rem;
+            color: #bbbbbb;
         }
         .security-card strong {
-            color: #e4b363;
+            color: #e33b3b;
             font-weight: 700;
         }
 
-        /* دکمه‌های ناوبری */
+        /* ========== دکمه‌های ناوبری (قرمز خوش رنگ) ========== */
         .nav-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 0.9rem;
+            gap: 0.8rem;
             margin: 2rem 0 2rem;
         }
         .cat-btn {
-            background: rgba(10, 8, 20, 0.8);
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(205, 164, 88, 0.4);
+            background: #1a1a1a;
+            border: 1px solid #333;
             padding: 0.7rem 1.8rem;
-            border-radius: 60px;
-            font-size: 0.95rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
             font-weight: 600;
-            color: #e7dfcd;
+            font-family: Vazir, sans-serif;
+            color: #dddddd;
             cursor: pointer;
-            transition: 0.25s ease;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            transition: all 0.2s ease;
         }
         .cat-btn i {
             margin-left: 6px;
             font-size: 0.9rem;
-            color: #cba45a;
+            color: #e33b3b;
         }
         .cat-btn:hover {
-            background: #2a243f;
-            border-color: #e2b164;
-            color: #fff3e0;
+            background: #2a2a2a;
+            border-color: #e33b3b;
+            color: white;
             transform: translateY(-2px);
         }
         .cat-btn.active {
-            background: linear-gradient(105deg, #9b6a38, #7a4f24);
-            border-color: #f5cf93;
+            background: #e33b3b;
+            border-color: #e33b3b;
             color: white;
-            box-shadow: 0 5px 15px rgba(155, 106, 56, 0.5);
+            box-shadow: 0 4px 12px rgba(227, 59, 59, 0.3);
+        }
+        .cat-btn.active i {
+            color: white;
         }
 
-        /* محتوای اصلی */
+        /* ========== محتوای اصلی با کارت‌های سه ستونه ========== */
         .content-panel {
-            background: rgba(12, 9, 24, 0.6);
-            backdrop-filter: blur(14px);
-            border-radius: 2rem;
+            background: #0e0e0e;
+            border-radius: 1.5rem;
             padding: 2rem;
-            border: 1px solid rgba(210, 175, 100, 0.2);
-            box-shadow: 0 30px 45px -15px black;
+            border: 1px solid #222;
         }
+
         .service-section {
             display: none;
-            animation: fadeSlideUp 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            animation: fadeIn 0.3s ease;
         }
         .service-section.active-section {
             display: block;
         }
-        @keyframes fadeSlideUp {
-            from { opacity: 0; transform: translateY(18px);}
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px);}
             to { opacity: 1; transform: translateY(0);}
         }
 
-        /* تیتر بخش‌ها */
+        /* تیتر بخش */
         .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid rgba(210, 170, 100, 0.4);
+            text-align: center;
+            margin-bottom: 2rem;
             padding-bottom: 0.75rem;
+            border-bottom: 2px solid #e33b3b;
+            display: inline-block;
+            width: 100%;
         }
         .section-header h2 {
+            font-size: 1.7rem;
             font-weight: 700;
-            font-size: 1.65rem;
-            background: linear-gradient(to left, #efe3c9, #cdaa65);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            color: #ffffff;
+            letter-spacing: -0.5px;
         }
         .badge-light {
-            background: #1e192e;
-            padding: 4px 12px;
-            border-radius: 50px;
+            background: #1f1f1f;
+            padding: 4px 14px;
+            border-radius: 30px;
             font-size: 0.7rem;
-            color: #ddba83;
-            border: 0.5px solid #69532e;
+            color: #e33b3b;
+            border: 1px solid #333;
+            margin-right: 12px;
         }
 
-        /* کارت‌های خدمات */
-        .card-service-list {
+        /* ========== کارت سه ستونه ==========
+           هر سرویس در یک مربع (card) شامل سه بخش:
+           سمت راست: عنوان سرویس
+           وسط: قیمت / اطلاعات
+           سمت چپ: وضعیت / دکمه
+        */
+        .service-card-list {
             display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin-top: 1rem;
-            justify-content: flex-start;
+            flex-direction: column;
+            gap: 0.8rem;
         }
-        .service-item {
-            background: rgba(8, 6, 16, 0.7);
-            border-radius: 1.3rem;
-            padding: 1.2rem 1.5rem;
-            flex: 1 1 210px;
-            min-width: 190px;
-            border: 1px solid #2b253e;
-            transition: all 0.2s;
-            box-shadow: 0 8px 14px -8px black;
-            cursor: pointer;
-        }
-        .service-item:hover {
-            border-color: #cba35c;
-            transform: translateY(-4px);
-            background: #110e22;
-            box-shadow: 0 15px 25px -12px #04020c;
-        }
-        .service-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 0.4rem;
-            color: #f2e5ce;
-        }
-        .service-price {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #e7bc7a;
-            margin: 0.4rem 0 0.2rem;
-        }
-        .price-hint {
-            font-size: 0.7rem;
-            color: #9b91ae;
-            margin-top: 6px;
-        }
-
-        .footnote {
-            margin-top: 1.8rem;
-            background: rgba(0,0,0,0.4);
+        .service-row-card {
+            background: #111111;
+            border: 1px solid #252525;
             border-radius: 1rem;
-            padding: 0.8rem 1rem;
-            font-size: 0.8rem;
-            color: #cbc2e0;
+            padding: 0.9rem 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            transition: all 0.2s;
+        }
+        .service-row-card:hover {
+            border-color: #e33b3b;
+            background: #141414;
+            transform: translateX(-3px);
+        }
+        /* ستون عنوان */
+        .service-title-col {
+            flex: 2;
+            min-width: 140px;
+        }
+        .service-title-col .title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #f0f0f0;
+        }
+        .service-title-col .sub {
+            font-size: 0.7rem;
+            color: #888;
+            margin-top: 4px;
+        }
+        /* ستون قیمت / اطلاعات */
+        .service-info-col {
+            flex: 2;
+            min-width: 130px;
             text-align: center;
+        }
+        .price {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #e33b3b;
+            background: #1c1c1c;
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 40px;
+        }
+        .price-note {
+            font-size: 0.65rem;
+            color: #777;
+            margin-top: 4px;
+        }
+        /* ستون وضعیت / انتخاب */
+        .service-status-col {
+            flex: 1;
+            min-width: 100px;
+            text-align: left;
+        }
+        .status-badge {
+            background: #1e1e1e;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            color: #aaa;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid #2c2c2c;
+        }
+        .status-badge i {
+            color: #e33b3b;
+            font-size: 0.7rem;
+        }
+        .contact-tag {
+            background: #e33b3b20;
+            border: 1px solid #e33b3b;
+            color: #e33b3b;
+            font-size: 0.7rem;
+            padding: 5px 12px;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .contact-tag:hover {
+            background: #e33b3b;
+            color: white;
         }
 
         /* فوتر */
@@ -238,221 +259,197 @@
             margin-top: 2.5rem;
             text-align: center;
             padding: 1.2rem;
-            border-top: 1px solid rgba(205, 164, 88, 0.3);
-            font-size: 0.8rem;
-            color: #b5a87c;
+            border-top: 1px solid #222;
+            font-size: 0.75rem;
+            color: #888;
         }
         .telegram-id {
-            background: #1f1b2e;
+            background: #1a1a1a;
             display: inline-block;
             padding: 0.2rem 1rem;
             border-radius: 60px;
             font-family: monospace;
-            font-size: 0.9rem;
-            direction: ltr;
-            letter-spacing: 0.5px;
-            color: #f3cf94;
+            font-size: 0.85rem;
+            color: #e33b3b;
             margin: 0 5px;
         }
         a {
             text-decoration: none;
             color: inherit;
         }
-        @media (max-width: 680px) {
+        button {
+            background: none;
+            border: none;
+            font-family: Vazir, sans-serif;
+        }
+
+        @media (max-width: 750px) {
             body { padding: 1rem; }
-            .brand { font-size: 2rem; }
-            .cat-btn { padding: 0.5rem 1.2rem; font-size: 0.8rem; }
-            .service-item { min-width: 160px; }
-            .section-header h2 { font-size: 1.3rem; }
-        }
-        i.fa, i.far, i.fas {
-            margin-left: 6px;
-        }
-        
-        :focus {
-            outline: none !important;
-            box-shadow: none !important;
+            .service-row-card { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .service-status-col { text-align: right; width: 100%; }
+            .service-info-col { text-align: right; }
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <div class="luxury-header">
-        <div class="brand">ONYX BAZAAR</div>
-        <div class="tagline">لوکس ترین بازار خدمات پریمیوم، استارز و افزایش تعامل تلگرام</div>
+    <div class="header">
+        <div class="brand">ONYX <span>BAZAAR</span></div>
+        <div class="tagline">لوکس‌ترین بازار خدمات پریمیوم، استارز و افزایش تعامل تلگرام</div>
     </div>
 
-    <!-- هشدار امنیتی -->
+    <!-- هشدار امنیتی مشکی-سفید -->
     <div class="security-card">
-        <i class="fas fa-shield-alt"></i> <strong>نکته مهم خرید امن :</strong> برای جلوگیری از فیشینگ و خطر فیش خوردن کارت، از خریداران برای خرید اولیه یک عکس از کارتی که با آن انتقال پول انجام می‌دهید + یک دست نویس گرفته می‌شود. این فرآیند فقط برای اعتماد دوطرفه شاپ به شما و شما به شاپ می‌باشد. ممنون از درک شما
+        <i class="fas fa-shield-alt"></i> <strong>نکته مهم خرید امن :</strong> برای جلوگیری از فیشینگ و خطر فیش خوردن کارت، از خریداران برای خرید اولیه یک عکس از کارتی که با آن انتقال پول انجام می‌دهید + یک دست نویس گرفته می‌شود. این فرآیند فقط برای اعتماد دوطرفه شاپ به شما و شما به شاپ می‌باشد.
     </div>
 
-    <!-- دکمه‌های دسته‌بندی -->
+    <!-- دکمه‌های قرمز رنگ -->
     <div class="nav-grid">
-        <button class="cat-btn" data-section="premium"><i class="fas fa-crown"></i> خدمات پریمیوم</button>
-        <button class="cat-btn" data-section="stars"><i class="fas fa-star"></i> خدمات استارز</button>
-        <button class="cat-btn" data-section="accounts"><i class="fas fa-user-circle"></i> اکانت های مجازی</button>
+        <button class="cat-btn active" data-section="premium"><i class="fas fa-crown"></i> پریمیوم</button>
+        <button class="cat-btn" data-section="stars"><i class="fas fa-star"></i> استارز</button>
+        <button class="cat-btn" data-section="accounts"><i class="fas fa-user-circle"></i> اکانت مجازی</button>
         <button class="cat-btn" data-section="member"><i class="fas fa-users"></i> ممبر فیک</button>
         <button class="cat-btn" data-section="seen"><i class="fas fa-eye"></i> سین فیک</button>
         <button class="cat-btn" data-section="reaction"><i class="fas fa-thumbs-up"></i> ری اکشن فیک</button>
-        <button class="cat-btn" data-section="other"><i class="fas fa-plug"></i> دیگر خدمات تلگرام</button>
+        <button class="cat-btn" data-section="other"><i class="fas fa-plug"></i> سایر خدمات</button>
     </div>
 
     <div class="content-panel">
-        <!-- بخش 1 : Premium -->
-        <div id="premium-section" class="service-section">
+        <!-- ========== بخش پریمیوم ========== -->
+        <div id="premium-section" class="service-section active-section">
             <div class="section-header">
-                <h2>خدمات پریمیوم Premium</h2>
-                <span class="badge-light">بدون لاگین | تحویل فوری</span>
+                <h2>خدمات پریمیوم <span class="badge-light">بدون لاگین</span></h2>
             </div>
-            <div class="card-service-list">
-                <div class="service-item"><div class="service-title">طرح 3 ماهه</div><div class="service-price">قیمت : پی وی (PV)</div><div class="price-hint">نوسانات دلار | استعلام خصوصی</div></div>
-                <div class="service-item"><div class="service-title">طرح 6 ماهه</div><div class="service-price">قیمت : پی وی (PV)</div><div class="price-hint">ارسال تضمینی</div></div>
-                <div class="service-item"><div class="service-title">طرح 12 ماهه</div><div class="service-price">قیمت : پی وی (PV)</div><div class="price-hint">پشتیبانی ویژه</div></div>
+            <div class="service-card-list">
+                <div class="service-row-card"><div class="service-title-col"><div class="title">طرح 3 ماهه</div><div class="sub">پریمیوم اختصاصی</div></div><div class="service-info-col"><span class="price">قیمت: پی وی (PV)</span><div class="price-note">نوسانات دلار</div></div><div class="service-status-col"><span class="status-badge"><i class="fas fa-question-circle"></i> استعلام قیمت</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">طرح 6 ماهه</div><div class="sub">پشتیبانی ویژه</div></div><div class="service-info-col"><span class="price">قیمت: پی وی (PV)</span><div class="price-note">ارسال تضمینی</div></div><div class="service-status-col"><span class="status-badge"><i class="fas fa-headset"></i> تماس با ادمین</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">طرح 12 ماهه</div><div class="sub">VIP ممتاز</div></div><div class="service-info-col"><span class="price">قیمت: پی وی (PV)</span><div class="price-note">پشتیبانی ۲۴/۷</div></div><div class="service-status-col"><span class="status-badge"><i class="fab fa-telegram"></i> @abbasOnyX</span></div></div>
             </div>
-            <div class="footnote">⚠️ به دلیل نوسانات شدید قیمت طلا و ارز، تمامی قیمت‌های پریمیوم به صورت پیوی (Private) اعلام می‌شود. برای اطلاع از قیمت لحظه‌ای با مدیریت ارتباط بگیرید.</div>
         </div>
 
-        <!-- بخش 2 : Stars -->
+        <!-- ========== بخش استارز ========== -->
         <div id="stars-section" class="service-section">
-            <div class="section-header"><h2>خدمات استارز (Telegram Stars)</h2><span class="badge-light">افزایش استارز حرفه‌ای</span></div>
-            <div class="card-service-list">
-                <div class="service-item"><div class="service-title">15 Stars</div><div class="service-price">پی وی</div></div>
-                <div class="service-item"><div class="service-title">25 Stars</div><div class="service-price">پی وی</div></div>
-                <div class="service-item"><div class="service-title">50 Stars</div><div class="service-price">پی وی</div></div>
-                <div class="service-item"><div class="service-title">75 Stars</div><div class="service-price">پی وی</div></div>
-                <div class="service-item"><div class="service-title">100 Stars</div><div class="service-price">پی وی</div></div>
-                <div class="service-item"><div class="service-title">200 Stars</div><div class="service-price">پی وی</div></div>
-                <div class="service-item"><div class="service-title">300 Stars</div><div class="service-price">پی وی</div></div>
-                <div class="service-item"><div class="service-title">500 Stars</div><div class="service-price">پی وی</div></div>
-                <div class="service-item"><div class="service-title">750 Stars</div><div class="service-price">پی وی</div></div>
-                <div class="service-item"><div class="service-title">1000 Stars</div><div class="service-price">پی وی</div></div>
-                <div class="service-item"><div class="service-title">2000 Stars</div><div class="service-price">پی وی</div></div>
-                <div class="service-item"><div class="service-title">3000 Stars</div><div class="service-price">پی وی</div></div>
+            <div class="section-header"><h2>خدمات استارز <span class="badge-light">Telegram Stars</span></h2></div>
+            <div class="service-card-list">
+                <div class="service-row-card"><div class="service-title-col"><div class="title">15 Stars</div><div class="sub">استارز تلگرام</div></div><div class="service-info-col"><span class="price">پی وی</span><div class="price-note">قیمت لحظه‌ای</div></div><div class="service-status-col"><span class="contact-tag" onclick="copyAdmin()">ارسال پیام</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">25 Stars</div><div class="sub">افزایش تعامل</div></div><div class="service-info-col"><span class="price">پی وی</span><div class="price-note">سریع</div></div><div class="service-status-col"><span class="contact-tag" onclick="copyAdmin()">استعلام</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">50 Stars</div><div class="sub">پکیج اقتصادی</div></div><div class="service-info-col"><span class="price">پی وی</span><div class="price-note">تضمین کیفیت</div></div><div class="service-status-col"><span class="contact-tag" onclick="copyAdmin()">درخواست</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">75 Stars</div><div class="sub">محبوب</div></div><div class="service-info-col"><span class="price">پی وی</span><div class="price-note">تحویل فوری</div></div><div class="service-status-col"><span class="contact-tag" onclick="copyAdmin()">خرید</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">100 Stars</div><div class="sub">استارز ویژه</div></div><div class="service-info-col"><span class="price">پی وی</span><div class="price-note">بدون مشکل</div></div><div class="service-status-col"><span class="contact-tag" onclick="copyAdmin()">تماس</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">200 Stars</div><div class="sub">مناسب برای کانال</div></div><div class="service-info-col"><span class="price">پی وی</span><div class="price-note">اکانت پریمیوم</div></div><div class="service-status-col"><span class="contact-tag" onclick="copyAdmin()">اطلاعات</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">300 Stars</div><div class="sub">پرفروش</div></div><div class="service-info-col"><span class="price">پی وی</span><div class="price-note">بالاترین کیفیت</div></div><div class="service-status-col"><span class="contact-tag" onclick="copyAdmin()">قیمت</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">500 Stars</div><div class="sub">پکیج حرفه‌ای</div></div><div class="service-info-col"><span class="price">پی وی</span><div class="price-note">ارسال آنی</div></div><div class="service-status-col"><span class="contact-tag" onclick="copyAdmin()">مشاوره</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">750 Stars</div><div class="sub">پشتیبانی ویژه</div></div><div class="service-info-col"><span class="price">پی وی</span><div class="price-note">گارانتی</div></div><div class="service-status-col"><span class="contact-tag" onclick="copyAdmin()">سبد خرید</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 Stars</div><div class="sub">حجم بالا</div></div><div class="service-info-col"><span class="price">پی وی</span><div class="price-note">مخصوص اینفلوئنسر</div></div><div class="service-status-col"><span class="contact-tag" onclick="copyAdmin()">ارتباط</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">2000 Stars</div><div class="sub">پرمیوم پلاس</div></div><div class="service-info-col"><span class="price">پی وی</span><div class="price-note">تخفیف ویژه</div></div><div class="service-status-col"><span class="contact-tag" onclick="copyAdmin()">دریافت قیمت</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">3000 Stars</div><div class="sub">ویژه برندها</div></div><div class="service-info-col"><span class="price">پی وی</span><div class="price-note">مشاوره اختصاصی</div></div><div class="service-status-col"><span class="contact-tag" onclick="copyAdmin()">تماس فوری</span></div></div>
             </div>
-            <div class="footnote">⚠️ تمامی قیمت‌های استارز به دلیل نوسانات دلار به صورت پیوی گفته می‌شود. لطفاً برای خرید و قیمت دقیق با ادمین در ارتباط باشید.</div>
         </div>
 
-        <!-- بخش 3 : اکانت های مجازی -->
+        <!-- ========== اکانت مجازی ========== -->
         <div id="accounts-section" class="service-section">
-            <div class="section-header"><h2>اکانت های مجازی تلگرام</h2><span class="badge-light">حساب‌های معتبر</span></div>
-            <div class="card-service-list">
-                <div class="service-item"><div class="service-title">آمریکا (America)</div><div class="service-price">60 تومان (T)</div><div class="price-hint">اکانت فعال و پشتیبانی</div></div>
-                <div class="service-item"><div class="service-title">کانادا (Canada)</div><div class="service-price">75 تومان (T)</div><div class="price-hint">تحویل سریع</div></div>
+            <div class="section-header"><h2>اکانت های مجازی تلگرام</h2></div>
+            <div class="service-card-list">
+                <div class="service-row-card"><div class="service-title-col"><div class="title">آمریکا (America)</div><div class="sub">اکانت آماده</div></div><div class="service-info-col"><span class="price">60,000 تومان</span><div class="price-note">پشتیبانی ۲۴ ساعته</div></div><div class="service-status-col"><span class="status-badge"><i class="fas fa-check-circle"></i> موجود</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">کانادا (Canada)</div><div class="sub">اکانت پریمیوم</div></div><div class="service-info-col"><span class="price">75,000 تومان</span><div class="price-note">تحویل سریع</div></div><div class="service-status-col"><span class="status-badge"><i class="fas fa-check-circle"></i> آماده سفارش</span></div></div>
             </div>
         </div>
 
-        <!-- بخش 4 : ممبر فیک -->
+        <!-- ========== ممبر فیک ========== -->
         <div id="member-section" class="service-section">
-            <div class="section-header"><h2>ممبر فیک</h2><span class="badge-light">افزایش اعضای کانال</span></div>
-            <div class="card-service-list">
-                <div class="service-item"><div class="service-title">1000 ممبر - 1 هفته</div><div class="service-price">40 هزار تومان</div><div class="price-hint">پایدار و با کیفیت</div></div>
-                <div class="service-item"><div class="service-title">1000 ممبر - 1 ماه</div><div class="service-price">80 هزار تومان</div><div class="price-hint">ماندگاری بالا</div></div>
-                <div class="service-item"><div class="service-title">1000 ممبر - مادام العمر</div><div class="service-price">150 هزار تومان</div><div class="price-hint">یکبار خرید، ماندگاری طولانی</div></div>
+            <div class="section-header"><h2>ممبر فیک (افزایش اعضا)</h2></div>
+            <div class="service-card-list">
+                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 ممبر - 1 هفته</div><div class="sub">موقت با کیفیت</div></div><div class="service-info-col"><span class="price">40,000 تومان</span><div class="price-note">پایدار</div></div><div class="service-status-col"><span class="status-badge"><i class="fas fa-chart-line"></i> فعال</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 ممبر - 1 ماه</div><div class="sub">ماندگاری بالا</div></div><div class="service-info-col"><span class="price">80,000 تومان</span><div class="price-note">ریتینشن عالی</div></div><div class="service-status-col"><span class="status-badge"><i class="fas fa-chart-line"></i> پرفروش</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 ممبر - مادام العمر</div><div class="sub">یکبار خرید، ماندگار</div></div><div class="service-info-col"><span class="price">150,000 تومان</span><div class="price-note">لایف تایم</div></div><div class="service-status-col"><span class="status-badge"><i class="fas fa-infinity"></i> دائمی</span></div></div>
             </div>
         </div>
 
-        <!-- بخش 5 : سین فیک -->
+        <!-- ========== سین فیک ========== -->
         <div id="seen-section" class="service-section">
-            <div class="section-header"><h2>سین فیک (افزایش بازدید)</h2><span class="badge-light">Seen & View</span></div>
-            <div class="card-service-list">
-                <div class="service-item"><div class="service-title">1000 سین / بازدید</div><div class="service-price">5 هزار تومان</div><div class="price-hint">مناسب استوری و پیام</div></div>
+            <div class="section-header"><h2>سین فیک (افزایش بازدید)</h2></div>
+            <div class="service-card-list">
+                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 سین / بازدید</div><div class="sub">مناسب استوری و پیام</div></div><div class="service-info-col"><span class="price">5,000 تومان</span><div class="price-note">فوری</div></div><div class="service-status-col"><span class="status-badge"><i class="fas fa-eye"></i> سفارش</span></div></div>
             </div>
-            <div class="footnote">سین فیک (View) برای افزایش جذابیت کانال، گروه و استوری‌های تلگرامی.</div>
         </div>
 
-        <!-- بخش 6 : ری اکشن فیک -->
+        <!-- ========== ری اکشن فیک ========== -->
         <div id="reaction-section" class="service-section">
-            <div class="section-header"><h2>ری اکشن فیک (Reaction)</h2><span class="badge-light">واکنش‌های اختصاصی</span></div>
-            <div class="card-service-list">
-                <div class="service-item"><div class="service-title">1000 ری اکشن پریمیوم</div><div class="service-price">15 هزار تومان</div><div class="price-hint">واکنش‌های متنوع با کیفیت</div></div>
-                <div class="service-item"><div class="service-title">1000 ری اکشن دیفالت</div><div class="service-price">8 هزار تومان</div><div class="price-hint">واکنش پیش‌فرض (لایک)</div></div>
+            <div class="section-header"><h2>ری اکشن فیک (Reaction)</h2></div>
+            <div class="service-card-list">
+                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 ری اکشن پریمیوم</div><div class="sub">واکنش‌های ویژه</div></div><div class="service-info-col"><span class="price">15,000 تومان</span><div class="price-note">کیفیت عالی</div></div><div class="service-status-col"><span class="status-badge"><i class="fas fa-fire"></i> محبوب</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 ری اکشن دیفالت</div><div class="sub">واکنش پیش‌فرض (لایک)</div></div><div class="service-info-col"><span class="price">8,000 تومان</span><div class="price-note">اقتصادی</div></div><div class="service-status-col"><span class="status-badge"><i class="fas fa-thumbs-up"></i> موجود</span></div></div>
             </div>
         </div>
 
-        <!-- بخش 7 : دیگر خدمات -->
+        <!-- ========== سایر خدمات ========== -->
         <div id="other-section" class="service-section">
-            <div class="section-header"><h2>دیگر خدمات تلگرام</h2><span class="badge-light">به زودی</span></div>
-            <div class="card-service-list">
-                <div class="service-item"><div class="service-title">ربات افزایش ممبر</div><div class="service-price">در حال توسعه</div><div class="price-hint">سفارشی سازی</div></div>
-                <div class="service-item"><div class="service-title">سرویس ویژه</div><div class="service-price">درخواست تکی</div><div class="price-hint">ارتباط با پشتیبانی</div></div>
+            <div class="section-header"><h2>دیگر خدمات تلگرام</h2></div>
+            <div class="service-card-list">
+                <div class="service-row-card"><div class="service-title-col"><div class="title">ربات افزایش ممبر</div><div class="sub">در حال توسعه</div></div><div class="service-info-col"><span class="price">به زودی</span><div class="price-note">اختصاصی</div></div><div class="service-status-col"><span class="status-badge"><i class="fas fa-clock"></i> پیش‌فروش</span></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">سرویس ویژه سفارشی</div><div class="sub">درخواست تکی</div></div><div class="service-info-col"><span class="price">توافقی</span><div class="price-note">مشاوره رایگان</div></div><div class="service-status-col"><span class="contact-tag" onclick="copyAdmin()">ارتباط با ادمین</span></div></div>
             </div>
-            <div class="footnote">سایر خدمات نظیر افزایش بازدید ریلز، ممبر واقعی و ربات‌های ارسال انبوه به زودی راه‌اندازی می‌شود.</div>
         </div>
     </div>
 
     <!-- فوتر -->
     <div class="footer-gold">
-        <div>
-            <i class="fab fa-telegram"></i> آیدی پشتیبانی و ارتباط با ادمین : 
-            <span class="telegram-id">@abbasOnyX</span>
-        </div>
-        <div style="margin-top: 10px;">
-            <i class="far fa-copyright"></i> ۲۰۲۵ - تمامی حقوق مادی و معنوی این مجموعه متعلق به ONYX BAZAAR می‌باشد. هرگونه کپی‌برداری پیگرد قانونی دارد.
-        </div>
-        <div style="margin-top: 8px; font-size: 0.7rem; color: #998f70;">
-            کلیه خدمات بدون لاگین و با بالاترین کیفیت ارائه می‌شود. قیمت‌ها بر اساس نوسانات بازار به‌روزرسانی می‌گردد.
-        </div>
+        <div><i class="fab fa-telegram"></i> آیدی پشتیبانی و ارتباط با ادمین : <span class="telegram-id" id="adminId" onclick="copyAdminText()">@abbasOnyX</span></div>
+        <div style="margin-top: 12px;"><i class="far fa-copyright"></i> ۲۰۲۵ - تمامی حقوق مادی و معنوی این مجموعه متعلق به ONYX BAZAAR می‌باشد.</div>
+        <div style="margin-top: 6px; font-size: 0.7rem;">کلیه خدمات بدون لاگین و با بالاترین کیفیت ارائه می‌شود. قیمت‌ها بر اساس نوسانات بازار به‌روزرسانی می‌گردد.</div>
     </div>
 </div>
 
 <script>
-    (function() {
-        const sectionsMap = {
-            premium: 'premium-section',
-            stars: 'stars-section',
-            accounts: 'accounts-section',
-            member: 'member-section',
-            seen: 'seen-section',
-            reaction: 'reaction-section',
-            other: 'other-section'
-        };
+    // سکشن‌ها
+    const sectionsMap = {
+        premium: 'premium-section',
+        stars: 'stars-section',
+        accounts: 'accounts-section',
+        member: 'member-section',
+        seen: 'seen-section',
+        reaction: 'reaction-section',
+        other: 'other-section'
+    };
 
-        function activateSection(sectionId) {
-            Object.values(sectionsMap).forEach(sec => {
-                const el = document.getElementById(sec);
-                if(el) el.classList.remove('active-section');
-            });
-            const targetSection = document.getElementById(sectionId);
-            if(targetSection) targetSection.classList.add('active-section');
+    function activateSection(sectionId) {
+        Object.values(sectionsMap).forEach(sec => {
+            const el = document.getElementById(sec);
+            if (el) el.classList.remove('active-section');
+        });
+        const target = document.getElementById(sectionId);
+        if (target) target.classList.add('active-section');
 
-            const allBtns = document.querySelectorAll('.cat-btn');
-            allBtns.forEach(btn => btn.classList.remove('active'));
-            const entry = Object.entries(sectionsMap).find(([key, val]) => val === sectionId);
-            if(entry) {
-                const activeBtn = document.querySelector(`.cat-btn[data-section="${entry[0]}"]`);
-                if(activeBtn) activeBtn.classList.add('active');
-            }
+        const allBtns = document.querySelectorAll('.cat-btn');
+        allBtns.forEach(btn => btn.classList.remove('active'));
+        const entry = Object.entries(sectionsMap).find(([key, val]) => val === sectionId);
+        if (entry) {
+            const activeBtn = document.querySelector(`.cat-btn[data-section="${entry[0]}"]`);
+            if (activeBtn) activeBtn.classList.add('active');
         }
+    }
 
-        const btns = document.querySelectorAll('.cat-btn');
-        btns.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                const sectionKey = this.getAttribute('data-section');
-                if(sectionKey && sectionsMap[sectionKey]) {
-                    activateSection(sectionsMap[sectionKey]);
-                    window.location.hash = sectionKey;
-                }
-            });
+    const btns = document.querySelectorAll('.cat-btn');
+    btns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const key = btn.getAttribute('data-section');
+            if (key && sectionsMap[key]) activateSection(sectionsMap[key]);
         });
+    });
 
-        const startSection = () => {
-            const hash = window.location.hash.substring(1);
-            if(hash && sectionsMap[hash]) {
-                activateSection(sectionsMap[hash]);
-            } else {
-                activateSection(sectionsMap.premium);
-            }
-        };
-        startSection();
+    // فعال‌سازی پیش‌فرض
+    activateSection('premium-section');
 
-        window.addEventListener('hashchange', () => {
-            const newHash = window.location.hash.substring(1);
-            if(newHash && sectionsMap[newHash]) {
-                activateSection(sectionsMap[newHash]);
-            }
-        });
-    })();
+    // تابع کپی آیدی ادمین (راحت برای کاربر)
+    window.copyAdminText = function() {
+        const adminId = '@abbasOnyX';
+        navigator.clipboard.writeText(adminId);
+        alert('آیدی ادمین کپی شد: ' + adminId);
+    };
+    window.copyAdmin = function() {
+        navigator.clipboard.writeText('@abbasOnyX');
+        alert('آیدی ادمین @abbasOnyX کپی شد. می‌توانید در تلگرام پیام دهید.');
+    };
 </script>
 </body>
 </html>
