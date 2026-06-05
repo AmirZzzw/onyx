@@ -6,35 +6,38 @@
     <title>ONYX Bazaar | لوکس ترین خدمات پریمیوم و استارز تلگرام</title>
     <!-- Font Awesome 6 (Free Icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Font Vazir (حرفه‌ای فارسی) - با کیفیت بالا -->
+    
     <style>
-        /* تعریف کامل فونت وزیر با فرمت‌های مختلف */
+        /* ------------------------------------------------------------
+        اعمال مستقیم و تضمینی فونت وزیر (Vazir) با استفاده از فایل های معتبر 
+        و پشتیبان داخلی. در صورت عدم دسترسی به سرور، فونت سیستمی جایگزین می شود.
+        ------------------------------------------------------------ */
         @font-face {
             font-family: 'Vazir';
-            src: url('https://cdn.fontcdn.ir/FontPersian/Vazir/Vazir.eot') format('embedded-opentype'),
-                 url('https://cdn.fontcdn.ir/FontPersian/Vazir/Vazir.woff2') format('woff2'),
-                 url('https://cdn.fontcdn.ir/FontPersian/Vazir/Vazir.woff') format('woff'),
-                 url('https://cdn.fontcdn.ir/FontPersian/Vazir/Vazir.ttf') format('truetype');
-            font-weight: normal;
             font-style: normal;
+            font-weight: 100 900;
+            src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.2.0/dist/Vazir-Regular.woff2') format('woff2'),
+                 url('https://cdn.rawgit.com/rastikerdar/vazir-font/v30.2.0/dist/Vazir-Regular.woff') format('woff'),
+                 url('https://cdn.fontcdn.ir/FontPersian/Vazir/Vazir.woff2') format('woff2');
+            font-display: swap;
         }
         @font-face {
             font-family: 'Vazir';
-            src: url('https://cdn.fontcdn.ir/FontPersian/Vazir/Vazir-Bold.eot') format('embedded-opentype'),
-                 url('https://cdn.fontcdn.ir/FontPersian/Vazir/Vazir-Bold.woff2') format('woff2'),
-                 url('https://cdn.fontcdn.ir/FontPersian/Vazir/Vazir-Bold.woff') format('woff');
+            font-style: normal;
             font-weight: bold;
-            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.2.0/dist/Vazir-Bold.woff2') format('woff2'),
+                 url('https://cdn.rawgit.com/rastikerdar/vazir-font/v30.2.0/dist/Vazir-Bold.woff') format('woff');
+            font-display: swap;
         }
         @font-face {
             font-family: 'Vazir';
-            src: url('https://cdn.fontcdn.ir/FontPersian/Vazir/Vazir-Light.eot') format('embedded-opentype'),
-                 url('https://cdn.fontcdn.ir/FontPersian/Vazir/Vazir-Light.woff2') format('woff2'),
-                 url('https://cdn.fontcdn.ir/FontPersian/Vazir/Vazir-Light.woff') format('woff');
-            font-weight: 300;
             font-style: normal;
+            font-weight: 300;
+            src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.2.0/dist/Vazir-Light.woff2') format('woff2');
+            font-display: swap;
         }
-        
+
+        /* تنظیمات پایه برای اطمینان از اعمال فونت در کل صفحه و تمامی المان‌ها */
         * {
             margin: 0;
             padding: 0;
@@ -42,8 +45,11 @@
             /* حذف کامل هایلایت آبی هنگام کلیک روی المان‌ها */
             -webkit-tap-highlight-color: transparent;
             -webkit-touch-callout: none;
-            -webkit-user-select: none; /* در صورت نیاز برای متن، اما متن باید قابل انتخاب باشد، فقط هایلایت رو حذف میکنیم */
             user-select: auto; /* متن قابل انتخاب باشد */
+        }
+
+        html, body, button, input, div, span, p, h1, h2, h3, h4, .cat-btn, .service-title, .service-price, .brand, .tagline, .security-card, .badge-light, .footnote, .footer-gold {
+            font-family: 'Vazir', 'Tahoma', 'Segoe UI', system-ui, sans-serif !important;
         }
         
         /* حذف فوکوس آبی برای تمامی المان‌های قابل کلیک */
@@ -53,13 +59,11 @@
             tap-highlight-color: transparent !important;
         }
         
-        /* حذف outline آبی در حالت focus */
         button:focus, .cat-btn:focus, a:focus, .service-item:focus {
             outline: none !important;
             box-shadow: none !important;
         }
         
-        /* همچنین برای لینک‌ها و دکمه‌ها در حالت active */
         button:active, .cat-btn:active, .service-item:active {
             background-color: inherit;
             outline: none;
@@ -67,13 +71,11 @@
 
         body {
             background: radial-gradient(ellipse at 20% 30%, #0a0715, #020105);
-            font-family: 'Vazir', 'Segoe UI', 'Tahoma', system-ui, sans-serif;
             color: #eceaff;
             line-height: 1.5;
             padding: 2rem 1.5rem;
         }
 
-        /* کانتینر اصلی */
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -87,7 +89,6 @@
         .brand {
             font-size: 3rem;
             font-weight: 800;
-            font-family: 'Vazir', sans-serif;
             background: linear-gradient(135deg, #F3E5C0, #CDA458, #AA7C3C);
             -webkit-background-clip: text;
             background-clip: text;
@@ -106,7 +107,6 @@
             display: inline-block;
             padding-bottom: 6px;
             font-size: 0.95rem;
-            font-family: 'Vazir', sans-serif;
         }
 
         /* بخش امنیت - شیشه‌ای مدرن */
@@ -123,14 +123,13 @@
             color: #dfd9c4;
             box-shadow: 0 8px 20px rgba(0,0,0,0.4);
             transition: 0.2s;
-            font-family: 'Vazir', sans-serif;
         }
         .security-card strong {
             color: #e4b363;
             font-weight: 700;
         }
 
-        /* دکمه‌های ناوبری - بدون هایلایت آبی */
+        /* دکمه‌های ناوبری */
         .nav-grid {
             display: flex;
             flex-wrap: wrap;
@@ -146,7 +145,6 @@
             border-radius: 60px;
             font-size: 0.95rem;
             font-weight: 600;
-            font-family: 'Vazir', sans-serif;
             color: #e7dfcd;
             cursor: pointer;
             transition: 0.25s ease;
@@ -176,7 +174,7 @@
             transform: translateY(0px);
         }
 
-        /* محتوای اصلی با شیشه‌ای سنگین */
+        /* محتوای اصلی */
         .content-panel {
             background: rgba(12, 9, 24, 0.6);
             backdrop-filter: blur(14px);
@@ -215,7 +213,6 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            font-family: 'Vazir', sans-serif;
         }
         .badge-light {
             background: #1e192e;
@@ -224,10 +221,9 @@
             font-size: 0.7rem;
             color: #ddba83;
             border: 0.5px solid #69532e;
-            font-family: 'Vazir', sans-serif;
         }
 
-        /* کارت‌های خدمات (طرح لوکس و مدرن) */
+        /* کارت‌های خدمات */
         .card-service-list {
             display: flex;
             flex-wrap: wrap;
@@ -261,25 +257,17 @@
             font-weight: 700;
             margin-bottom: 0.4rem;
             color: #f2e5ce;
-            font-family: 'Vazir', sans-serif;
         }
         .service-price {
             font-size: 1.1rem;
             font-weight: 600;
             color: #e7bc7a;
             margin: 0.4rem 0 0.2rem;
-            font-family: 'Vazir', sans-serif;
         }
         .price-hint {
             font-size: 0.7rem;
             color: #9b91ae;
             margin-top: 6px;
-            font-family: 'Vazir', sans-serif;
-        }
-        .separator-light {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #c6a15b, transparent);
-            margin: 1rem 0;
         }
 
         .footnote {
@@ -290,10 +278,9 @@
             font-size: 0.8rem;
             color: #cbc2e0;
             text-align: center;
-            font-family: 'Vazir', sans-serif;
         }
 
-        /* فوتر با کپی رایت و ایدی تلگرام */
+        /* فوتر */
         .footer-gold {
             margin-top: 2.5rem;
             text-align: center;
@@ -301,7 +288,6 @@
             border-top: 1px solid rgba(205, 164, 88, 0.3);
             font-size: 0.8rem;
             color: #b5a87c;
-            font-family: 'Vazir', sans-serif;
         }
         .telegram-id {
             background: #1f1b2e;
@@ -330,7 +316,7 @@
             margin-left: 6px;
         }
         
-        /* حذف کامل هرگونه رنگ آبی در حالت focus-visible در مرورگرهای مختلف */
+        /* حذف کامل هرگونه رنگ آبی */
         :focus {
             outline: none !important;
             box-shadow: none !important;
@@ -348,12 +334,12 @@
         <div class="tagline">لوکس ترین بازار خدمات پریمیوم، استارز و افزایش تعامل تلگرام</div>
     </div>
 
-    <!-- هشدار امنیتی + توضیحات اعتماد دوطرفه -->
+    <!-- هشدار امنیتی -->
     <div class="security-card">
         <i class="fas fa-shield-alt"></i> <strong>نکته مهم خرید امن :</strong> برای جلوگیری از فیشینگ و خطر فیش خوردن کارت، از خریداران برای خرید اولیه یک عکس از کارتی که با آن انتقال پول انجام می‌دهید + یک دست نویس گرفته می‌شود. این فرآیند فقط برای اعتماد دوطرفه شاپ به شما و شما به شاپ می‌باشد. ممنون از درک شما
     </div>
 
-    <!-- دکمه‌های دسته‌بندی مدرن -->
+    <!-- دکمه‌های دسته‌بندی -->
     <div class="nav-grid">
         <button class="cat-btn" data-section="premium"><i class="fas fa-crown"></i> خدمات پریمیوم</button>
         <button class="cat-btn" data-section="stars"><i class="fas fa-star"></i> خدمات استارز</button>
@@ -418,7 +404,7 @@
             </div>
         </div>
 
-        <!-- بخش 5 : سین فیک (Seen Fake) -->
+        <!-- بخش 5 : سین فیک -->
         <div id="seen-section" class="service-section">
             <div class="section-header"><h2>سین فیک (افزایش بازدید)</h2><span class="badge-light">Seen & View</span></div>
             <div class="card-service-list">
@@ -436,7 +422,7 @@
             </div>
         </div>
 
-        <!-- بخش 7 : دیگر خدمات تلگرام -->
+        <!-- بخش 7 : دیگر خدمات -->
         <div id="other-section" class="service-section">
             <div class="section-header"><h2>دیگر خدمات تلگرام</h2><span class="badge-light">به زودی</span></div>
             <div class="card-service-list">
@@ -447,7 +433,7 @@
         </div>
     </div>
 
-    <!-- فوتر با کپی رایت و ایدی تلگرام جدید @abbasOnyX -->
+    <!-- فوتر با آیدی جدید ادمین -->
     <div class="footer-gold">
         <div>
             <i class="fab fa-telegram"></i> آیدی پشتیبانی و ارتباط با ادمین : 
@@ -464,7 +450,6 @@
 
 <script>
     (function() {
-        // نگاشت دکمه‌ها به آی‌دی سکشن‌ها
         const sectionsMap = {
             premium: 'premium-section',
             stars: 'stars-section',
@@ -476,7 +461,6 @@
         };
 
         function activateSection(sectionId) {
-            // مخفی کردن همه سکشن‌ها
             Object.values(sectionsMap).forEach(sec => {
                 const el = document.getElementById(sec);
                 if(el) el.classList.remove('active-section');
@@ -484,10 +468,8 @@
             const targetSection = document.getElementById(sectionId);
             if(targetSection) targetSection.classList.add('active-section');
 
-            // تغییر وضعیت active روی دکمه‌ها
             const allBtns = document.querySelectorAll('.cat-btn');
             allBtns.forEach(btn => btn.classList.remove('active'));
-            // پیدا کردن دکمه متناسب
             const entry = Object.entries(sectionsMap).find(([key, val]) => val === sectionId);
             if(entry) {
                 const activeBtn = document.querySelector(`.cat-btn[data-section="${entry[0]}"]`);
@@ -495,20 +477,17 @@
             }
         }
 
-        // attach event listener به دکمه‌ها
         const btns = document.querySelectorAll('.cat-btn');
         btns.forEach(btn => {
             btn.addEventListener('click', function(e) {
                 const sectionKey = this.getAttribute('data-section');
                 if(sectionKey && sectionsMap[sectionKey]) {
                     activateSection(sectionsMap[sectionKey]);
-                    // آپدیت URL hash برای دسترسی راحت (اختیاری)
                     window.location.hash = sectionKey;
                 }
             });
         });
 
-        // فعال کردن سکشن پیش‌فرض (پریمیوم)
         const startSection = () => {
             const hash = window.location.hash.substring(1);
             if(hash && sectionsMap[hash]) {
@@ -519,7 +498,6 @@
         };
         startSection();
 
-        // همگام‌سازی با تغییر هش
         window.addEventListener('hashchange', () => {
             const newHash = window.location.hash.substring(1);
             if(newHash && sectionsMap[newHash]) {
@@ -527,22 +505,12 @@
             }
         });
 
-        // راهنمایی برای کاربران هنگام هاور روی آیتم‌های پی وی
         const pvCards = document.querySelectorAll('.service-item');
         pvCards.forEach(card => {
             if(card.innerText.includes('پی وی') || card.innerText.includes('PV')) {
                 card.setAttribute('title', 'قیمت پیوی : جهت استعلام با @abbasOnyX ارتباط بگیرید');
                 card.style.cursor = 'pointer';
             }
-        });
-        
-        // حذف کامل هرگونه رنگ آبی در کل صفحه با جاوااسکریپت نیز (پشتیبانی بیشتر)
-        document.querySelectorAll('*').forEach(el => {
-            el.addEventListener('mousedown', function(e) {
-                // جلوگیری از نمایش هایلایت مرورگر روی کلیک های سریع
-                this.style.userSelect = 'none';
-                setTimeout(() => { this.style.userSelect = ''; }, 10);
-            });
         });
     })();
 </script>
