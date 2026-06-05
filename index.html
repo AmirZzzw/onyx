@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>ONYX Bazaar | خدمات پرمیوم تلگرام</title>
 
-        <!-- SEO Description -->
+    <!-- SEO Description -->
     <meta name="description" content="امن، سریع، حرفه‌ای. ONYX BAZAAR | ارائه‌دهنده خدمات پریمیوم، استارز، ممبر و ری اکشن فیک. ۲ سال اعتماد شما، یک هدف: کیفیت.">
-
-    <!-- Page Title -->
-    <title>Sidka Shop | سیدکا شاپ</title>
 
     <!-- OG — Social Share -->
     <meta property="og:site_name" content="ONYX Bazaar | خدمات پرمیوم تلگرام">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sidkashop.qzz.io">
+    <meta property="og:url" content="https://onyxbazaar.netlify.app">
     <meta property="og:title" content="ONYX Bazaar | خدمات پرمیوم تلگرام">
     <meta property="og:image" content="https://raw.githubusercontent.com/AmirZzzw/onyx/main/Logo.png">
     <meta property="og:description" content="امن، سریع، حرفه‌ای. ONYX BAZAAR | ارائه‌دهنده خدمات پریمیوم، استارز، ممبر و ری اکشن فیک. ۲ سال اعتماد شما، یک هدف: کیفیت.">
@@ -93,7 +90,7 @@
             padding-top: 8px;
         }
 
-        /* ========== هشدار فیشینگ (متن اصلی اصلاح شده) ========== */
+        /* ========== هشدار فیشینگ ========== */
         .phishing-warning {
             background: #1a0a0a;
             border: 2px solid #e33b3b;
@@ -280,6 +277,146 @@
             color: white;
         }
 
+        /* استایل استارز لیست قیمت */
+        .stars-package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        .stars-item {
+            background: #111111;
+            border: 1px solid #252525;
+            border-radius: 1rem;
+            padding: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+        }
+        .stars-item:hover {
+            border-color: #e33b3b;
+            background: #141414;
+        }
+        .stars-name {
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .stars-price {
+            color: #e33b3b;
+            font-weight: 700;
+            font-size: 0.85rem;
+            background: #1c1c1c;
+            padding: 3px 8px;
+            border-radius: 30px;
+        }
+        .stars-order-btn {
+            background: #e33b3b20;
+            border: 1px solid #e33b3b;
+            color: #e33b3b;
+            font-size: 0.7rem;
+            padding: 4px 12px;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: Vazir, sans-serif;
+        }
+        .stars-order-btn:hover {
+            background: #e33b3b;
+            color: white;
+        }
+
+        /* ========== صفحه ثبت سفارش (رسید) ========== */
+        .order-page {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .payment-card {
+            background: #111111;
+            border: 1px solid #e33b3b;
+            border-radius: 1.5rem;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .card-number {
+            font-size: 1.6rem;
+            font-weight: 800;
+            font-family: monospace;
+            background: #1a1a1a;
+            padding: 0.8rem;
+            border-radius: 1rem;
+            margin: 1rem 0;
+            letter-spacing: 3px;
+            color: #e33b3b;
+            border: 1px solid #333;
+            direction: ltr;
+        }
+        .copy-card-btn {
+            background: #e33b3b;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-family: Vazir, sans-serif;
+            font-size: 0.8rem;
+            cursor: pointer;
+            margin-top: 0.5rem;
+        }
+        .receipt-form {
+            background: #0c0c0c;
+            border: 1px solid #252525;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            color: #ccc;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 0.8rem;
+            padding: 0.8rem;
+            color: white;
+            font-family: Vazir, sans-serif;
+            font-size: 0.85rem;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        .submit-receipt-btn {
+            background: #e33b3b;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 0.9rem;
+            border-radius: 0.8rem;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: Vazir, sans-serif;
+            cursor: pointer;
+            margin-top: 0.5rem;
+        }
+        .back-to-services {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #e33b3b;
+            color: #e33b3b;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.8rem;
+            cursor: pointer;
+            margin-bottom: 1rem;
+        }
+
         /* ========== استایل اطلاعات شاپ ========== */
         .about-shop {
             max-width: 900px;
@@ -333,7 +470,6 @@
             margin-top: 5px;
         }
         
-        /* بخش ارتباط با ادمین - با فاصله مناسب */
         .contact-section {
             margin-top: 2rem;
             padding: 1.5rem;
@@ -379,7 +515,6 @@
             margin-top: 0.8rem;
         }
 
-        /* فوتر */
         .footer-gold {
             margin-top: 2rem;
             text-align: center;
@@ -389,7 +524,6 @@
             color: #888;
         }
 
-        /* توست نوتیفیکیشن */
         .toast-msg {
             position: fixed;
             bottom: 30px;
@@ -419,6 +553,7 @@
             .main-btn { padding: 0.6rem 1.5rem; font-size: 0.9rem; }
             .about-card { padding: 1.2rem; }
             .telegram-id-big { font-size: 0.9rem; padding: 0.5rem 1.2rem; }
+            .card-number { font-size: 1.1rem; }
         }
     </style>
 </head>
@@ -429,14 +564,12 @@
         <div class="tagline">لوکس‌ترین بازار خدمات پریمیوم، استارز و افزایش تعامل تلگرام</div>
     </div>
 
-    <!-- هشدار فیشینگ با متن اصلی و آیدی صحیح -->
     <div class="phishing-warning">
         <i class="fas fa-shield-alt"></i> <strong>توضیحات راجب چگونه خرید شما</strong><br>
         برای جلوگیری از فیشینگ و خطر فیش خوردن کارت مالک از شما برای خرید اولیه یک عکس از کارتی که باهاش انتقال پول انجام میدید + یک دست نویس گرفته میشه<br>
         این کار فقط برای اعتماد دوطرفه شاپ به شما و شما به شاپ هست ، ممنون که درک میکنید<br>
     </div>
 
-    <!-- دو دکمه اصلی -->
     <div class="main-buttons">
         <button class="main-btn active" id="btn-services"><i class="fas fa-list-ul"></i> لیست خدمات</button>
         <button class="main-btn" id="btn-about"><i class="fas fa-store"></i> اطلاعات شاپ</button>
@@ -451,40 +584,44 @@
             
             <h3 style="color:#e33b3b; margin: 1rem 0 0.5rem 0;"><i class="fas fa-crown"></i> خدمات پریمیوم</h3>
             <div class="service-card-list">
-                <div class="service-row-card"><div class="service-title-col"><div class="title">طرح 3 ماهه</div><div class="sub">پریمیوم اختصاصی بدون لاگین</div></div><div class="service-info-col"><span class="price">قیمت: پی وی (PV)</span><div class="price-note">نوسانات دلار</div></div><div class="service-status-col"><button class="order-btn copy-order"><i class="fab fa-telegram"></i> استعلام</button></div></div>
-                <div class="service-row-card"><div class="service-title-col"><div class="title">طرح 6 ماهه</div><div class="sub">پشتیبانی ویژه VIP</div></div><div class="service-info-col"><span class="price">قیمت: پی وی (PV)</span><div class="price-note">ارسال تضمینی</div></div><div class="service-status-col"><button class="order-btn copy-order"><i class="fab fa-telegram"></i> استعلام</button></div></div>
-                <div class="service-row-card"><div class="service-title-col"><div class="title">طرح 12 ماهه</div><div class="sub">ممتاز با گارانتی</div></div><div class="service-info-col"><span class="price">قیمت: پی وی (PV)</span><div class="price-note">پشتیبانی ۲۴/۷</div></div><div class="service-status-col"><button class="order-btn copy-order"><i class="fab fa-telegram"></i> استعلام</button></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">طرح 3 ماهه</div><div class="sub">پریمیوم اختصاصی بدون لاگین</div></div><div class="service-info-col"><span class="price">قیمت: پی وی (PV)</span><div class="price-note">نوسانات دلار</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="طرح 3 ماهه پریمیوم"><i class="fab fa-telegram"></i> ثبت سفارش</button></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">طرح 6 ماهه</div><div class="sub">پشتیبانی ویژه VIP</div></div><div class="service-info-col"><span class="price">قیمت: پی وی (PV)</span><div class="price-note">ارسال تضمینی</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="طرح 6 ماهه پریمیوم"><i class="fab fa-telegram"></i> ثبت سفارش</button></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">طرح 12 ماهه</div><div class="sub">ممتاز با گارانتی</div></div><div class="service-info-col"><span class="price">قیمت: پی وی (PV)</span><div class="price-note">پشتیبانی ۲۴/۷</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="طرح 12 ماهه پریمیوم"><i class="fab fa-telegram"></i> ثبت سفارش</button></div></div>
             </div>
 
-            <h3 style="color:#e33b3b; margin: 1.5rem 0 0.5rem 0;"><i class="fas fa-star"></i> خدمات استارز</h3>
-            <div class="service-card-list">
-                <div class="service-row-card"><div class="service-title-col"><div class="title">15 - 75 Stars</div><div class="sub">پکیج‌های پایه</div></div><div class="service-info-col"><span class="price">پی وی</span><div class="price-note">قیمت لحظه‌ای</div></div><div class="service-status-col"><button class="order-btn copy-order"><i class="fab fa-telegram"></i> خرید</button></div></div>
-                <div class="service-row-card"><div class="service-title-col"><div class="title">100 - 500 Stars</div><div class="sub">محبوب و پرفروش</div></div><div class="service-info-col"><span class="price">پی وی</span><div class="price-note">تضمین کیفیت</div></div><div class="service-status-col"><button class="order-btn copy-order"><i class="fab fa-telegram"></i> خرید</button></div></div>
-                <div class="service-row-card"><div class="service-title-col"><div class="title">750 - 3000 Stars</div><div class="sub">حجم بالا و ویژه</div></div><div class="service-info-col"><span class="price">پی وی</span><div class="price-note">مخصوص اینفلوئنسر</div></div><div class="service-status-col"><button class="order-btn copy-order"><i class="fab fa-telegram"></i> مشاوره</button></div></div>
+            <h3 style="color:#e33b3b; margin: 1.5rem 0 0.5rem 0;"><i class="fas fa-star"></i> خدمات استارز (گیفتی)</h3>
+            <div class="stars-package-grid">
+                <div class="stars-item"><span class="stars-name">⭐ 15 Stars</span><span class="stars-price">40,000 تومان</span><button class="stars-order-btn" data-stars="15 Stars - 40,000 تومان">ثبت سفارش</button></div>
+                <div class="stars-item"><span class="stars-name">⭐ 25 Stars</span><span class="stars-price">80,000 تومان</span><button class="stars-order-btn" data-stars="25 Stars - 80,000 تومان">ثبت سفارش</button></div>
+                <div class="stars-item"><span class="stars-name">⭐ 50 Stars</span><span class="stars-price">140,000 تومان</span><button class="stars-order-btn" data-stars="50 Stars - 140,000 تومان">ثبت سفارش</button></div>
+                <div class="stars-item"><span class="stars-name">⭐ 50 Stars (پکیج دوم)</span><span class="stars-price">160,000 تومان</span><button class="stars-order-btn" data-stars="50 Stars ویژه - 160,000 تومان">ثبت سفارش</button></div>
+                <div class="stars-item"><span class="stars-name">⭐ 100 Stars</span><span class="stars-price">280,000 تومان</span><button class="stars-order-btn" data-stars="100 Stars - 280,000 تومان">ثبت سفارش</button></div>
+                <div class="stars-item"><span class="stars-name">⭐ 150 Stars</span><span class="stars-price">430,000 تومان</span><button class="stars-order-btn" data-stars="150 Stars - 430,000 تومان">ثبت سفارش</button></div>
+                <div class="stars-item"><span class="stars-name">⭐ 200 Stars</span><span class="stars-price">570,000 تومان</span><button class="stars-order-btn" data-stars="200 Stars - 570,000 تومان">ثبت سفارش</button></div>
             </div>
 
             <h3 style="color:#e33b3b; margin: 1.5rem 0 0.5rem 0;"><i class="fas fa-user-circle"></i> اکانت های مجازی</h3>
             <div class="service-card-list">
-                <div class="service-row-card"><div class="service-title-col"><div class="title">آمریکا (America)</div><div class="sub">اکانت آماده تلگرام</div></div><div class="service-info-col"><span class="price">60,000 تومان</span><div class="price-note">پشتیبانی</div></div><div class="service-status-col"><button class="order-btn copy-order"><i class="fas fa-shopping-cart"></i> سفارش</button></div></div>
-                <div class="service-row-card"><div class="service-title-col"><div class="title">کانادا (Canada)</div><div class="sub">اکانت پریمیوم</div></div><div class="service-info-col"><span class="price">75,000 تومان</span><div class="price-note">تحویل فوری</div></div><div class="service-status-col"><button class="order-btn copy-order"><i class="fas fa-shopping-cart"></i> سفارش</button></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">آمریکا (America)</div><div class="sub">اکانت آماده تلگرام</div></div><div class="service-info-col"><span class="price">60,000 تومان</span><div class="price-note">پشتیبانی</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="اکانت آمریکا - 60,000 تومان"><i class="fas fa-shopping-cart"></i> ثبت سفارش</button></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">کانادا (Canada)</div><div class="sub">اکانت پریمیوم</div></div><div class="service-info-col"><span class="price">75,000 تومان</span><div class="price-note">تحویل فوری</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="اکانت کانادا - 75,000 تومان"><i class="fas fa-shopping-cart"></i> ثبت سفارش</button></div></div>
             </div>
 
             <h3 style="color:#e33b3b; margin: 1.5rem 0 0.5rem 0;"><i class="fas fa-users"></i> ممبر فیک</h3>
             <div class="service-card-list">
-                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 ممبر - 1 هفته</div><div class="sub">موقت با کیفیت</div></div><div class="service-info-col"><span class="price">40,000 تومان</span><div class="price-note">پایدار</div></div><div class="service-status-col"><button class="order-btn copy-order"><i class="fas fa-shopping-cart"></i> سفارش</button></div></div>
-                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 ممبر - 1 ماه</div><div class="sub">ماندگاری بالا</div></div><div class="service-info-col"><span class="price">80,000 تومان</span><div class="price-note">ریتینشن عالی</div></div><div class="service-status-col"><button class="order-btn copy-order"><i class="fas fa-shopping-cart"></i> سفارش</button></div></div>
-                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 ممبر - مادام العمر</div><div class="sub">یکبار خرید ماندگار</div></div><div class="service-info-col"><span class="price">150,000 تومان</span><div class="price-note">لایف تایم</div></div><div class="service-status-col"><button class="order-btn copy-order"><i class="fas fa-shopping-cart"></i> سفارش</button></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 ممبر - 1 هفته</div><div class="sub">موقت با کیفیت</div></div><div class="service-info-col"><span class="price">40,000 تومان</span><div class="price-note">پایدار</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="1000 ممبر 1 هفته - 40,000 تومان"><i class="fas fa-shopping-cart"></i> ثبت سفارش</button></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 ممبر - 1 ماه</div><div class="sub">ماندگاری بالا</div></div><div class="service-info-col"><span class="price">80,000 تومان</span><div class="price-note">ریتینشن عالی</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="1000 ممبر 1 ماه - 80,000 تومان"><i class="fas fa-shopping-cart"></i> ثبت سفارش</button></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 ممبر - مادام العمر</div><div class="sub">یکبار خرید ماندگار</div></div><div class="service-info-col"><span class="price">150,000 تومان</span><div class="price-note">لایف تایم</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="1000 ممبر مادام العمر - 150,000 تومان"><i class="fas fa-shopping-cart"></i> ثبت سفارش</button></div></div>
             </div>
 
             <h3 style="color:#e33b3b; margin: 1.5rem 0 0.5rem 0;"><i class="fas fa-eye"></i> سین فیک و ری اکشن فیک</h3>
             <div class="service-card-list">
-                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 سین / بازدید</div><div class="sub">مناسب استوری و پیام</div></div><div class="service-info-col"><span class="price">5,000 تومان</span><div class="price-note">فوری</div></div><div class="service-status-col"><button class="order-btn copy-order"><i class="fas fa-shopping-cart"></i> سفارش</button></div></div>
-                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 ری اکشن پریمیوم</div><div class="sub">واکنش‌های ویژه</div></div><div class="service-info-col"><span class="price">15,000 تومان</span><div class="price-note">کیفیت عالی</div></div><div class="service-status-col"><button class="order-btn copy-order"><i class="fas fa-shopping-cart"></i> سفارش</button></div></div>
-                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 ری اکشن دیفالت</div><div class="sub">واکنش پیش‌فرض (لایک)</div></div><div class="service-info-col"><span class="price">8,000 تومان</span><div class="price-note">اقتصادی</div></div><div class="service-status-col"><button class="order-btn copy-order"><i class="fas fa-shopping-cart"></i> سفارش</button></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 سین / بازدید</div><div class="sub">مناسب استوری و پیام</div></div><div class="service-info-col"><span class="price">5,000 تومان</span><div class="price-note">فوری</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="1000 سین فیک - 5,000 تومان"><i class="fas fa-shopping-cart"></i> ثبت سفارش</button></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 ری اکشن پریمیوم</div><div class="sub">واکنش‌های ویژه</div></div><div class="service-info-col"><span class="price">15,000 تومان</span><div class="price-note">کیفیت عالی</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="1000 ری اکشن پریمیوم - 15,000 تومان"><i class="fas fa-shopping-cart"></i> ثبت سفارش</button></div></div>
+                <div class="service-row-card"><div class="service-title-col"><div class="title">1000 ری اکشن دیفالت</div><div class="sub">واکنش پیش‌فرض (لایک)</div></div><div class="service-info-col"><span class="price">8,000 تومان</span><div class="price-note">اقتصادی</div></div><div class="service-status-col"><button class="order-btn order-service-btn" data-service="1000 ری اکشن دیفالت - 8,000 تومان"><i class="fas fa-shopping-cart"></i> ثبت سفارش</button></div></div>
             </div>
 
             <div class="footer-note" style="margin-top: 2rem; text-align: center; font-size: 0.75rem; color: #777;">
-                <i class="fas fa-info-circle"></i> کلیه قیمت‌های استارز و پریمیوم به دلیل نوسانات بازار به صورت پیوی اعلام می‌گردد. برای استعلام با ادمین تماس بگیرید.
+                <i class="fas fa-info-circle"></i> کلیه قیمت‌های پریمیوم به دلیل نوسانات بازار به صورت پیوی اعلام می‌گردد. برای استعلام با ادمین تماس بگیرید.
             </div>
         </div>
 
@@ -523,7 +660,6 @@
                     </div>
                 </div>
 
-                <!-- بخش ارتباط با ادمین با فاصله مناسب -->
                 <div class="contact-section">
                     <div class="contact-title">
                         <i class="fab fa-telegram"></i> راه ارتباطی با ادمین و پشتیبانی
@@ -536,6 +672,49 @@
                 </div>
             </div>
         </div>
+
+        <!-- صفحه ثبت سفارش (پرداخت و رسید) -->
+        <div id="order-page" class="page-content">
+            <div class="order-page">
+                <button class="back-to-services" id="backToServices"><i class="fas fa-arrow-right"></i> بازگشت به لیست خدمات</button>
+                <div class="payment-card">
+                    <i class="fas fa-credit-card" style="font-size: 2rem; color:#e33b3b;"></i>
+                    <h3 style="margin: 0.5rem 0;">اطلاعات واریز</h3>
+                    <div class="card-number" id="cardNumberDisplay">6037-9974-1234-5678</div>
+                    <button class="copy-card-btn" id="copyCardBtn"><i class="fas fa-copy"></i> کپی شماره کارت</button>
+                    <div style="margin-top: 1rem; font-size:0.8rem; color:#aaa;">به نام: *** علیپور</div>
+                </div>
+
+                <div class="receipt-form">
+                    <h4 style="margin-bottom: 1rem; color:#e33b3b;"><i class="fas fa-upload"></i> ارسال رسید پرداخت</h4>
+                    <div class="form-group">
+                        <label>نام و نام خانوادگی</label>
+                        <input type="text" id="fullName" placeholder="مثال: علی رضایی">
+                    </div>
+                    <div class="form-group">
+                        <label>آیدی تلگرام (برای هماهنگی)</label>
+                        <input type="text" id="telegramId" placeholder="@username">
+                    </div>
+                    <div class="form-group">
+                        <label>مبلغ پرداختی (تومان)</label>
+                        <input type="text" id="amountPaid" placeholder="مبلغ واریز شده">
+                    </div>
+                    <div class="form-group">
+                        <label>شماره تراکنش / رسید بانکی</label>
+                        <input type="text" id="refCode" placeholder="کد رهگیری یا شماره مرجع">
+                    </div>
+                    <div class="form-group">
+                        <label>لینک عکس فیش واریزی (آپلود در فضای ابری و ارسال لینک)</label>
+                        <textarea id="receiptLink" placeholder="لطفاً تصویر رسید را در سرویسی مثل img.ir آپلود کرده و لینک آن را وارد کنید"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>توضیحات سفارش (خدمت درخواستی)</label>
+                        <textarea id="orderDetails" placeholder="مثال: 100 Star - بسته 100 تایی"></textarea>
+                    </div>
+                    <button class="submit-receipt-btn" id="submitReceiptBtn"><i class="fab fa-telegram"></i> ارسال رسید به ادمین</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="footer-gold">
@@ -545,6 +724,8 @@
 
 <script>
     const ADMIN_ID = "@abbasOnyX";
+    const CARD_NUMBER = "6037-9974-1234-5678";
+    let currentSelectedService = "";
 
     function showToast(message) {
         const toast = document.createElement('div');
@@ -554,27 +735,52 @@
         setTimeout(() => toast.remove(), 2000);
     }
 
+    function copyCardNumber() {
+        navigator.clipboard.writeText(CARD_NUMBER).then(() => {
+            showToast('شماره کارت ' + CARD_NUMBER + ' کپی شد');
+        }).catch(() => showToast('کپی دستی: ' + CARD_NUMBER));
+    }
+
     function copyAdminAndNotify() {
         navigator.clipboard.writeText(ADMIN_ID).then(() => {
             showToast('آیدی ادمین ' + ADMIN_ID + ' کپی شد! می‌توانید در تلگرام پیام دهید.');
-        }).catch(() => {
-            showToast('لطفاً دستی کپی کنید: ' + ADMIN_ID);
-        });
+        }).catch(() => showToast('لطفاً دستی کپی کنید: ' + ADMIN_ID));
+    }
+
+    // نمایش صفحه سفارش با نام خدمت
+    function showOrderPage(serviceName) {
+        currentSelectedService = serviceName;
+        document.getElementById('orderDetails').value = serviceName;
+        document.getElementById('services-page').classList.remove('active-page');
+        document.getElementById('about-page').classList.remove('active-page');
+        document.getElementById('order-page').classList.add('active-page');
+        btnServices.classList.remove('active');
+        btnAbout.classList.remove('active');
+    }
+
+    function backToServicesPage() {
+        document.getElementById('order-page').classList.remove('active-page');
+        document.getElementById('services-page').classList.add('active-page');
+        btnServices.classList.add('active');
+        btnAbout.classList.remove('active');
+        currentSelectedService = "";
     }
 
     const btnServices = document.getElementById('btn-services');
     const btnAbout = document.getElementById('btn-about');
     const servicesPage = document.getElementById('services-page');
     const aboutPage = document.getElementById('about-page');
+    const orderPage = document.getElementById('order-page');
 
     function setActivePage(page) {
         servicesPage.classList.remove('active-page');
         aboutPage.classList.remove('active-page');
+        orderPage.classList.remove('active-page');
         if (page === 'services') {
             servicesPage.classList.add('active-page');
             btnServices.classList.add('active');
             btnAbout.classList.remove('active');
-        } else {
+        } else if(page === 'about') {
             aboutPage.classList.add('active-page');
             btnAbout.classList.add('active');
             btnServices.classList.remove('active');
@@ -584,17 +790,60 @@
     btnServices.addEventListener('click', () => setActivePage('services'));
     btnAbout.addEventListener('click', () => setActivePage('about'));
 
-    document.querySelectorAll('.copy-order').forEach(btn => {
+    document.getElementById('backToServices').addEventListener('click', backToServicesPage);
+    document.getElementById('copyCardBtn').addEventListener('click', copyCardNumber);
+
+    // همه دکمه‌های ثبت سفارش (خدمات عادی)
+    document.querySelectorAll('.order-service-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
-            copyAdminAndNotify();
+            const service = btn.getAttribute('data-service') || "سرویس نامشخص";
+            showOrderPage(service);
         });
     });
 
+    // دکمه‌های استارز
+    document.querySelectorAll('.stars-order-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const starsPackage = btn.getAttribute('data-stars') || "بسته ستاره";
+            showOrderPage(starsPackage);
+        });
+    });
+
+    // ارسال رسید به ادمین (تلگرام)
+    document.getElementById('submitReceiptBtn').addEventListener('click', () => {
+        const fullName = document.getElementById('fullName').value.trim();
+        const telegramId = document.getElementById('telegramId').value.trim();
+        const amountPaid = document.getElementById('amountPaid').value.trim();
+        const refCode = document.getElementById('refCode').value.trim();
+        const receiptLink = document.getElementById('receiptLink').value.trim();
+        const orderDetails = document.getElementById('orderDetails').value.trim();
+
+        if(!fullName || !telegramId || !amountPaid || !refCode || !receiptLink) {
+            showToast("لطفاً تمام فیلدهای اجباری (نام، آیدی، مبلغ، تراکنش، لینک رسید) را پر کنید.");
+            return;
+        }
+
+        const message = `✅ سفارش جدید از سایت ONYX BAZAAR\n\n👤 نام: ${fullName}\n🆔 تلگرام: ${telegramId}\n💰 مبلغ: ${amountPaid} تومان\n🧾 شماره تراکنش: ${refCode}\n🔗 لینک رسید: ${receiptLink}\n📦 جزئیات سفارش: ${orderDetails || currentSelectedService || "نامشخص"}\n\n⏱ لطفاً رسید بررسی شود.`;
+
+        const encodedMsg = encodeURIComponent(message);
+        window.open(`https://t.me/${ADMIN_ID.replace('@','')}?text=${encodedMsg}`, '_blank');
+        
+        showToast("به تلگرام منتقل شدید. پیام حاوی رسید برای ادمین ارسال شود.");
+        
+        // ریست فرم
+        document.getElementById('fullName').value = '';
+        document.getElementById('telegramId').value = '';
+        document.getElementById('amountPaid').value = '';
+        document.getElementById('refCode').value = '';
+        document.getElementById('receiptLink').value = '';
+        document.getElementById('orderDetails').value = '';
+        currentSelectedService = "";
+    });
+
     const aboutAdminSpan = document.getElementById('aboutAdminId');
-    if (aboutAdminSpan) {
-        aboutAdminSpan.addEventListener('click', copyAdminAndNotify);
-    }
+    if (aboutAdminSpan) aboutAdminSpan.addEventListener('click', copyAdminAndNotify);
 </script>
 </body>
 </html>
