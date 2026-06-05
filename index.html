@@ -809,32 +809,33 @@
 
     // ارسال رسید به ادمین (تلگرام)
     document.getElementById('submitReceiptBtn').addEventListener('click', () => {
-        const fullName = document.getElementById('fullName').value.trim();
-        const telegramId = document.getElementById('telegramId').value.trim();
-        const amountPaid = document.getElementById('amountPaid').value.trim();
-        const refCode = document.getElementById('refCode').value.trim();
-        const orderDetails = document.getElementById('orderDetails').value.trim();
+    const fullName = document.getElementById('fullName').value.trim();
+    const telegramId = document.getElementById('telegramId').value.trim();
+    const amountPaid = document.getElementById('amountPaid').value.trim();
+    const refCode = document.getElementById('refCode').value.trim();
+    const orderDetails = document.getElementById('orderDetails').value.trim();
 
-        if(!fullName || !telegramId || !amountPaid || !refCode || !receiptLink) {
-            showToast("لطفاً تمام فیلدهای اجباری (نام، آیدی، مبلغ، تراکنش، لینک رسید) را پر کنید.");
-            return;
-        }
+    // فقط فیلدهایی که وجود دارن رو چک کن (بدون receiptLink)
+    if(!fullName || !telegramId || !amountPaid || !refCode) {
+        showToast("لطفاً تمام فیلدها (نام، آیدی، مبلغ، تراکنش) را پر کنید.");
+        return;
+    }
 
-        const message = `✅ سفارش جدید از سایت ONYX BAZAAR\n\n👤 نام: ${fullName}\n🆔 تلگرام: ${telegramId}\n💰 مبلغ: ${amountPaid} تومان\n🧾 شماره تراکنش: ${refCode}\n📦 جزئیات سفارش: ${orderDetails || currentSelectedService || "نامشخص"}\n\n⏱ لطفاً رسید بررسی شود.`;
+    const message = `✅ سفارش جدید از سایت ONYX BAZAAR\n\n👤 نام: ${fullName}\n🆔 تلگرام: ${telegramId}\n💰 مبلغ: ${amountPaid} تومان\n🧾 شماره تراکنش: ${refCode}\n📦 جزئیات سفارش: ${orderDetails || currentSelectedService || "نامشخص"}\n\n⏱ لطفاً رسید بررسی شود.`;
 
-        const encodedMsg = encodeURIComponent(message);
-        window.open(`https://t.me/${ADMIN_ID.replace('@','')}?text=${encodedMsg}`, '_blank');
-        
-        showToast("به تلگرام منتقل شدید. پیام حاوی رسید برای ادمین ارسال شود.");
-        
-        // ریست فرم
-        document.getElementById('fullName').value = '';
-        document.getElementById('telegramId').value = '';
-        document.getElementById('amountPaid').value = '';
-        document.getElementById('refCode').value = '';
-        document.getElementById('orderDetails').value = '';
-        currentSelectedService = "";
-    });
+    const encodedMsg = encodeURIComponent(message);
+    window.open(`https://t.me/${ADMIN_ID.replace('@','')}?text=${encodedMsg}`, '_blank');
+    
+    showToast("به تلگرام منتقل شدید. پیام حاوی رسید برای ادمین ارسال شود.");
+    
+    // ریست فرم
+    document.getElementById('fullName').value = '';
+    document.getElementById('telegramId').value = '';
+    document.getElementById('amountPaid').value = '';
+    document.getElementById('refCode').value = '';
+    document.getElementById('orderDetails').value = '';
+    currentSelectedService = "";
+});
 
     const aboutAdminSpan = document.getElementById('aboutAdminId');
     if (aboutAdminSpan) aboutAdminSpan.addEventListener('click', copyAdminAndNotify);
