@@ -53,13 +53,13 @@
             padding-top: 8px;
         }
 
-        /* ========== هشدار فیشینگ (مهم) ========== */
+        /* ========== هشدار فیشینگ (متن اصلی اصلاح شده) ========== */
         .phishing-warning {
             background: #1a0a0a;
             border: 2px solid #e33b3b;
             border-radius: 1rem;
             padding: 1rem 1.5rem;
-            margin: 1rem auto;
+            margin: 1rem auto 1.5rem auto;
             max-width: 950px;
             text-align: center;
             font-size: 0.85rem;
@@ -138,7 +138,7 @@
             to { opacity: 1; transform: translateY(0);}
         }
 
-        /* ========== استایل لیست خدمات (کارت سه ستونه) ========== */
+        /* ========== استایل لیست خدمات ========== */
         .section-header {
             text-align: center;
             margin-bottom: 2rem;
@@ -233,13 +233,14 @@
             align-items: center;
             gap: 8px;
             font-weight: 500;
+            font-family: Vazir, sans-serif;
         }
         .order-btn:hover {
             background: #e33b3b;
             color: white;
         }
 
-        /* ========== استایل اطلاعات شاپ (about page) ========== */
+        /* ========== استایل اطلاعات شاپ ========== */
         .about-shop {
             max-width: 900px;
             margin: 0 auto;
@@ -291,29 +292,51 @@
             color: #aaa;
             margin-top: 5px;
         }
-        .contact-info {
+        
+        /* بخش ارتباط با ادمین - با فاصله مناسب */
+        .contact-section {
             margin-top: 2rem;
+            padding: 1.5rem;
+            background: #0a0a0a;
+            border-radius: 1.5rem;
+            border: 1px solid #2a2a2a;
+        }
+        .contact-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #e33b3b;
+            text-align: center;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .contact-box {
             text-align: center;
             padding: 1rem;
-            background: #0a0a0a;
-            border-radius: 1rem;
         }
         .telegram-id-big {
             background: #1a1a1a;
             display: inline-block;
-            padding: 0.5rem 1.8rem;
+            padding: 0.7rem 2rem;
             border-radius: 60px;
             font-family: monospace;
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: #e33b3b;
-            margin: 0 5px;
+            margin: 0.5rem auto;
             cursor: pointer;
-            border: 1px solid #e33b3b;
+            border: 2px solid #e33b3b;
             transition: 0.2s;
         }
         .telegram-id-big:hover {
             background: #e33b3b;
             color: white;
+        }
+        .contact-note {
+            font-size: 0.7rem;
+            color: #888;
+            margin-top: 0.8rem;
         }
 
         /* فوتر */
@@ -354,6 +377,8 @@
             .service-status-col { text-align: right; width: 100%; }
             .service-info-col { text-align: right; }
             .main-btn { padding: 0.6rem 1.5rem; font-size: 0.9rem; }
+            .about-card { padding: 1.2rem; }
+            .telegram-id-big { font-size: 0.9rem; padding: 0.5rem 1.2rem; }
         }
     </style>
 </head>
@@ -364,10 +389,12 @@
         <div class="tagline">لوکس‌ترین بازار خدمات پریمیوم، استارز و افزایش تعامل تلگرام</div>
     </div>
 
-    <!-- هشدار فیشینگ (طبق درخواست) -->
+    <!-- هشدار فیشینگ با متن اصلی و آیدی صحیح -->
     <div class="phishing-warning">
-        <i class="fas fa-shield-haltered"></i> <strong>⚠️ هشدار مهم ضد فیشینگ ⚠️</strong><br>
-        تنها آیدی رسمی مجموعه <strong>@abbasOnyX</strong> می‌باشد. قبل از هرگونه پرداخت، حتماً از صحت آیدی اطمینان حاصل کنید. ما هرگز از شما کارت بانکی نمیخواهیم و اطلاعات محرمانه را فقط از طریق پیوی شخصی ادمین رد و بدل میکنیم. در صورت مشاهده صفحات جعلی، سریعاً به ما گزارش دهید.
+        <i class="fas fa-shield-alt"></i> <strong>⚠️ توضیحات راجب چگونه خرید شما ⚠️</strong><br>
+        برای جلوگیری از فیشینگ و خطر فیش خوردن کارت مالک از شما برای خرید اولیه یک عکس از کارتی که باهاش انتقال پول انجام میدید + یک دست نویس گرفته میشه<br>
+        این کار فقط برای اعتماد دوطرفه شاپ به شما و شما به شاپ هست ، ممنون که درک میکنید<br>
+        <strong style="display: inline-block; margin-top: 8px;">🆔 تنها آیدی رسمی مجموعه @abbasOnyX می‌باشد.</strong>
     </div>
 
     <!-- دو دکمه اصلی -->
@@ -377,7 +404,7 @@
     </div>
 
     <div class="content-panel">
-        <!-- صفحه لیست خدمات (همه خدمات به صورت خوشگل) -->
+        <!-- صفحه لیست خدمات -->
         <div id="services-page" class="page-content active-page">
             <div class="section-header">
                 <h2>لیست کامل خدمات <span class="badge-light">به‌روزرسانی شده</span></h2>
@@ -422,7 +449,7 @@
             </div>
         </div>
 
-        <!-- صفحه اطلاعات شاپ (درباره ما با توضیحات کامل ۲ سال فعالیت) -->
+        <!-- صفحه اطلاعات شاپ -->
         <div id="about-page" class="page-content">
             <div class="about-shop">
                 <div class="about-card">
@@ -457,11 +484,16 @@
                     </div>
                 </div>
 
-                <div class="contact-info">
-                    <i class="fab fa-telegram" style="color:#e33b3b; font-size: 1.2rem;"></i> 
-                    راه ارتباطی با ادمین و پشتیبانی : 
-                    <span class="telegram-id-big" id="aboutAdminId">@abbasOnyX</span>
-                    <div style="margin-top: 12px; font-size: 0.75rem; color:#aaa;">کلیک کنید تا آیدی کپی شود</div>
+                <!-- بخش ارتباط با ادمین با فاصله مناسب -->
+                <div class="contact-section">
+                    <div class="contact-title">
+                        <i class="fab fa-telegram"></i> راه ارتباطی با ادمین و پشتیبانی
+                    </div>
+                    <div class="contact-box">
+                        <div class="telegram-id-big" id="aboutAdminId">@abbasOnyX</div>
+                        <div class="contact-note">برای استعلام قیمت، ثبت سفارش و پشتیبانی، روی آیدی کلیک کنید تا کپی شود</div>
+                        <div class="contact-note">پاسخگویی ۲۴ ساعته حتی در روزهای تعطیل</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -475,7 +507,6 @@
 <script>
     const ADMIN_ID = "@abbasOnyX";
 
-    // تابع نمایش پیام کپی شده
     function showToast(message) {
         const toast = document.createElement('div');
         toast.className = 'toast-msg';
@@ -486,13 +517,12 @@
 
     function copyAdminAndNotify() {
         navigator.clipboard.writeText(ADMIN_ID).then(() => {
-            showToast('✅ آیدی ادمین ' + ADMIN_ID + ' کپی شد! می‌توانید در تلگرام پیام دهید.');
+            showToast('آیدی ادمین ' + ADMIN_ID + ' کپی شد! می‌توانید در تلگرام پیام دهید.');
         }).catch(() => {
-            showToast('❌ لطفاً دستی کپی کنید: ' + ADMIN_ID);
+            showToast('لطفاً دستی کپی کنید: ' + ADMIN_ID);
         });
     }
 
-    // ========== تغییر بین دو صفحه اصلی ==========
     const btnServices = document.getElementById('btn-services');
     const btnAbout = document.getElementById('btn-about');
     const servicesPage = document.getElementById('services-page');
@@ -515,7 +545,6 @@
     btnServices.addEventListener('click', () => setActivePage('services'));
     btnAbout.addEventListener('click', () => setActivePage('about'));
 
-    // اعمال کپی روی تمام دکمه‌های سفارش/استعلام (کلاس copy-order)
     document.querySelectorAll('.copy-order').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -523,7 +552,6 @@
         });
     });
 
-    // همچنین روی آیدی داخل صفحه اطلاعات شاپ
     const aboutAdminSpan = document.getElementById('aboutAdminId');
     if (aboutAdminSpan) {
         aboutAdminSpan.addEventListener('click', copyAdminAndNotify);
